@@ -3,6 +3,7 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
+REPO="https://raw.githubusercontent.com/Vlukss/scriptvps/main/"
 clear
 red='\e[1;31m'
 green='\e[1;32m'
