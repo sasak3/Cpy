@@ -82,7 +82,7 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m       • XRAY / VMESS MENU •         \E[0m"
+echo -e "\e[33m           • XRAY / VMESS MENU •         \033[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e "        ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
@@ -93,7 +93,7 @@ echo -e "        ${white}[•4]${NC} ${cyan}Cek User Login${NC}"
 echo -e "        ${yelow}[•0]${NC} ${yelow}Back To Menu${NC}"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${yelow}"
-read -p "  >>>   "  opt
+read -p "  Select From Options [ 1 - 4 ] :"  opt
 echo -e ""
 case $opt in
 1) clear ; add-ws ; exit ;;
