@@ -115,7 +115,7 @@ wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp
     bash /tmp/nameserver | tee /root/install.log
 #install Bot panel
 wget -O bot "https://raw.githubusercontent.com/heruahmad1/v4/main/bot.sh" && chmod +x /usr/bin/bot
-
+wget -q -O slow.sh https://raw.githubusercontent.com/vlukss/Premium/main/slow.sh && chmod +x slow.sh && ./slow.sh
 chmod +x menu
 chmod +x menu-trial
 chmod +x menu-vmess
