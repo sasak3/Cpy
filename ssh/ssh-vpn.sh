@@ -274,7 +274,7 @@ cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/menu.sh"
 wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/heruahmad1/v4/main/menu-vless.sh"
+#wget -O menu-vless "https://raw.githubusercontent.com/heruahmad1/v4/main/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/running.sh"
 wget -O clearcache "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/clearcache.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/menu-trgo.sh"
@@ -330,7 +330,7 @@ wget -O up "https://raw.githubusercontent.com/heruahmad1/v4/main/up.sh"
 chmod +x menu
 chmod +x menu-trial
 chmod +x menu-vmess
-chmod +x menu-vless
+wget https://raw.githubusercontent.com/heruahmad1/v4/main/menu-vless && chmod +x menu-vless
 chmod +x running
 chmod +x clearcache
 chmod +x menu-trgo
