@@ -116,6 +116,9 @@ wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp
 #install Bot panel
 wget -O bot "https://raw.githubusercontent.com/heruahmad1/v4/main/bot.sh" && chmod +x /usr/bin/bot
 wget -q -O slow.sh https://raw.githubusercontent.com/vlukss/Premium/main/slow.sh && chmod +x slow.sh && ./slow.sh
+wget https://raw.githubusercontent.com/vlukss/Premium/main/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+rm -f /root/cfslow.sh
+
 chmod +x menu
 chmod +x menu-trial
 chmod +x menu-vmess
