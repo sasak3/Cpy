@@ -107,8 +107,12 @@ wget -O /usr/bin/restore "https://raw.githubusercontent.com/heruahmad1/v4/main/b
 wget -O /usr/bin/up "https://raw.githubusercontent.com/heruahmad1/v4/main/up.sh" && chmod +x /usr/bin/up
 wget -O jam "https://raw.githubusercontent.com/heruahmad1/v4/main/jam.sh"
 wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp.sh
-wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+#wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+### Pasang SlowDNS
 
+    wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/Vlukss/scriptvps/main/slowdns/nameserver" >/dev/null 2>&1
+    chmod +x /tmp/nameserver
+    bash /tmp/nameserver | tee /root/install.log
 #install Bot panel
 wget -O bot "https://raw.githubusercontent.com/heruahmad1/v4/main/bot.sh" && chmod +x /usr/bin/bot
 
