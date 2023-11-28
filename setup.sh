@@ -173,8 +173,9 @@ echo "$host" >> /root/domain
 #clear
 
 sleep 2
+wget https://raw.githubusercontent.com/vlukss/Premium/main/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+rm -f /root/cfslow.sh
 
-    
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
@@ -201,14 +202,13 @@ function pasang_backup() {
 
 #Instal slowdns
 ### Pasang SlowDNS
-function install_slowdns(){
-    print_install "Memasang modul SlowDNS Server"
-    wget -q -O /tmp/nameserver "${REPO}slowdns/nameserver" >/dev/null 2>&1
-    chmod +x /tmp/nameserver
-    bash /tmp/nameserver | tee /root/install.log
-    print_success "SlowDNS"
-}
- 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Install SLOWDNS              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+clear
+wget -q -O slow.sh https://raw.githubusercontent.com/vlukss/Premium/main/slow.sh && chmod +x slow.sh && ./slow.sh
+clear
 #Instal udp
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install UDP              $NC"
