@@ -82,7 +82,7 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\e[33m           • XRAY / VMESS MENU •         \033[0m"
+echo -e "\e[33m         • XRAY / VMESS MENU •         \033[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e "        ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
