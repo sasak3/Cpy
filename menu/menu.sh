@@ -251,7 +251,7 @@ case $opt in
 4) clear ; menu-trgo ;;
 5) clear ; menu-trojan ;;
 6) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/heruahmad1/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
-7) clear ; status ;;
+7) clear ; running ;;
 8) clear ; restarts ;;
 9) clear ; menu-backup ;;
 10) clear ; wget https://raw.githubusercontent.com/heruahmad1/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
