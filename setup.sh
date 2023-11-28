@@ -139,10 +139,10 @@ yellow "Add Domain for vmess/vless/trojan dll"
   #  fi
     
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
-echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
+echo -e "                ⇱ INSTALL DOMAIN ⇲            "
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
-echo "1. Use Domain Script 01"
-echo "2. Use Domain Script 02"
+echo "1. Use Domain Script Star Tunnel"
+echo "2. Use Domain Script Stvpn"
 echo "2. Use Private Domain "
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 echo -e""
@@ -204,8 +204,7 @@ echo -e "$green          Install SLDNS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://github.com/SETANTAZVPN/sc/raw/main/slowdns/nameserver && chmod +x nameserver && ./nameserver
-clear
+wget https://raw.githubusercontent.com/heruahmad1/v4/main/slowdns/nameserver && chmod +x nameserver && ./nameserver
 
 #Instal udp
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
