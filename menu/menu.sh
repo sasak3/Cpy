@@ -208,8 +208,8 @@ IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e ""
 echo -e ""
-echo -e "               ${BICyan}Premium Script : ${BIPurple}STAR TUNNEL${NC}"
-echo -e "              ${BICyan} SCRIPT MULTI VER.3 STABILE ${NC}"
+echo -e "               ${BICyan}${BIPurple}.::::.  SKY TUNNEL  .::::.${NC}"
+echo -e "              ${BICyan} --------------------------------------- ${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Informations${NC}"
 echo -e "${BICyan} │====================================================="
