@@ -72,7 +72,9 @@ exit 0
 fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-echo -e "        ${red_background}SSH MENU${NC}"
+echo -e "       ${yellow}──────────────────────────────────${NC}"
+echo -e "                       ${white}SSH MENU${NC}"
+echo -e "       ${yellow}──────────────────────────────────${NC}"
 echo -e ""
 echo -e "        ${white}[•1]${NC}  ${cyann}Create ssh${NC}"
 echo -e "        ${white}[•2]${NC}  ${cyann}Create trial${NC}"
@@ -87,7 +89,7 @@ echo -e "        ${white}[•10]${NC} ${cyann}user lock${NC}"
 echo -e "        ${white}[•11]${NC} ${cyann}user unlock${NC}"
 echo -e "        ${yelow}[•0]${NC}  ${yelow}Back To Menu${NC}"
 echo -e "${yelow}"
-read -p " >>>  "  opt
+read -p " Select From Options [ 1 - 11 ] : "  opt
 echo -e ""
 case $opt in
 1) clear ; usernew ; exit ;;
