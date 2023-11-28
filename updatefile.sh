@@ -110,14 +110,12 @@ wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp
 #wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 ### Pasang SlowDNS
 
-    wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/Vlukss/scriptvps/main/slowdns/nameserver" >/dev/null 2>&1
-    chmod +x /tmp/nameserver
-    bash /tmp/nameserver | tee /root/install.log
+wget https://raw.githubusercontent.com/vlukss/Premium/main/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+rm -f /root/cfslow.sh
+
 #install Bot panel
 wget -O bot "https://raw.githubusercontent.com/heruahmad1/v4/main/bot.sh" && chmod +x /usr/bin/bot
 wget -q -O slow.sh https://raw.githubusercontent.com/vlukss/Premium/main/slow.sh && chmod +x slow.sh && ./slow.sh
-wget https://raw.githubusercontent.com/vlukss/Premium/main/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
-rm -f /root/cfslow.sh
 
 chmod +x menu
 chmod +x menu-trial
