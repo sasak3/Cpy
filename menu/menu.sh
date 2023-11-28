@@ -214,7 +214,7 @@ echo -e "   ${BIYellow}   ──────────────────
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │                     ${BIWhite}${UWhite}Informations${NC}"
 echo -e "${BIYellow}  │====================================================="
-echo -e " ${BIYellow} │ ${BICyan}💠 ISP VPS
+echo -e " ${BIYellow} │ ${BICyan}💠 ISP VPS        :  ${BIPurple}$ISP"${NC}"
 echo -e " ${BIYellow} │ ${BICyan}💠 CPU            :  ${BIPurple}$cpu_usage"${NC}"  
 echo -e " ${BIYellow} │ ${BICyan}💠 RAM            :  ${BIPurple}$tram Mb"${NC}"
 echo -e " ${BIYellow} │ ${BICyan}💠 Use Core       :  ${BIPurple}$XRAY${NC}"
