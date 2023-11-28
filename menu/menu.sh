@@ -218,7 +218,7 @@ echo -e " ${BIYellow} │ ${BICyan}💠 Use Core       :  ${BIPurple}XRAY${NC}"
 echo -e " ${BIYellow} │ ${BICyan}💠 Domain         :  ${BIPurple}$(cat /etc/xray/domain)${NC}"
 echo -e " ${BIYellow} │ ${BICyan}💠 IP-VPS         :  ${BIPurple}$IPVPS${NC}"
 echo -e " ${BIYellow} │ ${BICyan}💠 Expiry script${NC}  :  ${BIPurple}$useexp${NC} Days"
-echo -e " ${BIYellow} │ ${BICyan}💠 User        ${NC}   :  \033[1;36m $Name \e[0m"
+echo -e " ${BIYellow} │ ${BICyan}💠 User        ${NC}   : \033[1;36m $Name \e[0m"
 echo -e " ${BIYellow} └────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
@@ -239,10 +239,10 @@ echo -e "${BIYellow}  └──────────────────�
 echo -e "${BIYellow}  ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}"
-echo -e "${BIRed}                     Version script  3.0.1 ${NC}"
-echo -e "${BIRed}              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${BIRed}                    Version script  3.0.1 ${NC}"
+echo -e "${BIRed}               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo
-read -p " Select From Options [ 1 - 6 ] :" opt
+read -p " Select From Options [ 1 - 12 ] :" opt
 echo -e ""
 case $opt in
 1) clear ; menu-sshh ;;
