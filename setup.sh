@@ -199,13 +199,15 @@ function pasang_backup() {
 }
 
 #Instal slowdns
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install SLDNS              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 2
-clear
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/slowdns/nameserver && chmod +x nameserver && ./nameserver
-
+### Pasang SlowDNS
+function install_slowdns(){
+    print_install "Memasang modul SlowDNS Server"
+    wget -q -O /tmp/nameserver "${REPO}slowdns/nameserver" >/dev/null 2>&1
+    chmod +x /tmp/nameserver
+    bash /tmp/nameserver | tee /root/install.log
+    print_success "SlowDNS"
+}
+ 
 #Instal udp
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install UDP              $NC"
