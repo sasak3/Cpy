@@ -237,10 +237,10 @@ echo -e "${BIYellow}  │${NC}${BICyan} [•3]${NC}${white} VLESS${NC}          
 echo -e "${BIYellow}  │${NC}${BICyan} [•4]${NC}${white} TROJAN-GO${NC}         "   "${BICyan}[10]${NC}${white} INSTALL BOT VPS${NC} "                 
 echo -e "${BIYellow}  │${NC}${BICyan} [•5]${NC}${white} TROJAN-WS${NC}         "   "${BICyan}[11]${NC}${white} MENU SETINGS${NC} " 
 echo -e "${BIYellow}  │${NC}${BICyan} [•6]${NC}${white} Update Menu${NC}       "   "${BICyan}[12]${NC}${white} SETTING BOT${NC} "   
-echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}" 
-echo -e "${BIPurple}  ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "${BIYellow}  └────────────────────────────────────────────────────┘${NC}" 
+echo -e "${BIPurple}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIPurple}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
-echo -e "${BIPurple}  └─────────────────────────────────────────────────────┘${NC}"
+echo -e "${BIPurple}  └────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIYellow}                    Version script  3.0.1 ${NC}"
 echo -e "${BOLD}${BIRed}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
 echo
