@@ -211,7 +211,7 @@ clear
 echo -e ""
 echo -e ""
 echo -e "${BIPurple}  ┌┌┌┌──────────────────────────────────────────────┐┐┐┐${NC}"
-echo -e "${BIPurple}  ││││ ${BICyan}          .::::.  SKY-TUNNEL  .::::.   ${BIPurple}        ││││${NC}"
+echo -e "${BIPurple}  ││││ ${BICyan}          .::::.  SKY-TUNNEL  .::::.   ${BIPurple}      ││││${NC}"
 echo -e "${BIPurple}  └└└└──────────────────────────────────────────────┘┘┘┘ ${NC}"
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │                     INFORMATION                    │ ${NC}"
