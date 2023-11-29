@@ -2,6 +2,8 @@
 ipsaya=$(curl -sS ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
 data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
 checking_sc() {
     useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
