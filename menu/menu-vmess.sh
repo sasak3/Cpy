@@ -82,20 +82,20 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
-echo -e "\e[33m ┌┌┌┌──────────────────────────────────────────────┐┐┐┐\033[0m"
-echo -e "\e[33m ││││ ${cyan}    .::::.  XRAY / VMESS MENU  .::::. \e[33m        ││││\033[0m"
-echo -e "\e[33m └└└└──────────────────────────────────────────────┘┘┘┘\033[0m"
+echo -e "\e[33m ┌┌┌┌────────────────────────────────────┐┐┐┐\033[0m"
+echo -e "\e[33m ││││${cyan} .::::.  XRAY / VMESS MENU  .::::.  \e[33m││││\033[0m"
+echo -e "\e[33m └└└└────────────────────────────────────┘┘┘┘\033[0m"
 echo -e ""
-echo -e "\e[33m ┌─────────────────────────────────\033[0m"
-echo -e "\e[33m │ ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
-echo -e "\e[33m │ ${white}[•2]${NC} ${cyan}Create trial${NC}"
-echo -e "\e[33m │ ${white}[•3]${NC} ${cyan}Xtendd V2ray${NC}"
-echo -e "\e[33m │ ${white}[•4]${NC} ${cyan}Delete V2ray${NC}"
-echo -e "\e[33m │ ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
-echo -e "\e[33m │ ${white}[•0]${NC} ${cyan}Back To Menu${NC}"
-echo -e "\e[33m └─────────────────────────────────\033[0m"
+echo -e "\e[33m    ┌────────────────────────────────────┐\033[0m"
+echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
+echo -e "\e[33m    │ ${white}[•2]${NC} ${cyan}Create trial${NC}"
+echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}Xtendd V2ray${NC}"
+echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}Delete V2ray${NC}"
+echo -e "\e[33m    │ ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
+echo -e "\e[33m    │ ${white}[•0]${NC} ${cyan}Back To Menu${NC}"
+echo -e "\e[33m    └────────────────────────────────────┘\033[0m"
 echo -e "${yelow}"
-read -p "  Select From Options [1-5] : "opt
+read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
 1) clear ; add-ws ; exit ;;
