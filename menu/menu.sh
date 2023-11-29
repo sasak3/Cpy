@@ -241,8 +241,8 @@ echo -e "${BIYellow}  └──────────────────�
 echo -e "${BIPurple}  ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIPurple}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIPurple}  └─────────────────────────────────────────────────────┘${NC}"
-echo -e "${BIRed}                    Version script  3.0.1 ${NC}"
-echo -e "${BOLD}${BIYellow}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
+echo -e "${BIYellow}                    Version script  3.0.1 ${NC}"
+echo -e "${BOLD}${BIRed}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
 echo
 read -p " Select From Options [ 1 - 12 ] : " opt
 echo -e ""
