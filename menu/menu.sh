@@ -238,13 +238,13 @@ echo -e "${BIYellow}  │${NC}${BICyan} [•6]${NC}${white} Update Menu${NC}    
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BIYellow}  ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │  \033[0m ${BOLD}${GREEN}---${BIYellow} SSH${GREEN}  ---  ${BIYellow}VMESS  ${GREEN}---  ${BIYellow}VLESS  ${GREEN}---  ${BIYellow}TROJAN${GREEN} --- $NC "
-echo -e "${BIYellow}  │  \033[0m ${Blue}     $ssh1          $vma            $vla            $tra              $NC"
+echo -e "${BIYellow}  │  \033[0m ${Blue}     $ssh1          $vma           $vla           $tra              $NC"
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIYellow}  ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIRed}                    Version script  3.0.1 ${NC}"
-echo -e "${BIRed}                 ━━━━━━${BIYellow}━━━━━━━━━━━━${GREEN}━━━━━━━━━━${NC}"
+echo -e "${BOLD}${BIRed}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
 echo
 read -p " Select From Options [ 1 - 12 ] :" opt
 echo -e ""
