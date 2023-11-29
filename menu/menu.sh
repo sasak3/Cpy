@@ -217,7 +217,7 @@ echo -e "${BIYellow}  │====================================================│
 echo -e " ${BIYellow} │ ${BICyan}□ Current Time        =  ${GREEN}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
 echo -e " ${BIYellow} │ ${BICyan}□ Current Domain      =  ${GREEN}$( cat /etc/xray/domain )${NC}"
 echo -e " ${BIYellow} │ ${BICyan}□ NS Domain           =  ${GREEN}$(cat /root/nsdomain)${NC}"
-echo -e " ${BIYellow} │ ${BICyan}□ ISP VPS             =  ${GREEN}$ISPVPS${NC}"
+echo -e " ${BIYellow} │ ${BICyan}□ ISP VPS             =  ${GREEN} ${ISP} ${CITY} ${NC}"
 echo -e " ${BIYellow} │ ${BICyan}□ IP-VPS              =  ${GREEN}$IPVPS${NC}"
 echo -e " ${BIYellow} │ ${BICyan}□ User script Exp     =  ${GREEN}$useexp${NC}  \033[1;36m $Name \e[0m${NC} "
 echo -e " ${BIYellow} └────────────────────────────────────────────────────┘${NC}"
