@@ -81,19 +81,21 @@ exit 0
 fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear 
-echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "                      << TROJAN-WS MENU >>                    \E[0m" | lolcat
-echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
-echo -e " "
-echo -e "        ${white}[•1]${NC} ${cyan}Create Trojan${NC}"
-echo -e "        ${white}[•2]${NC} ${cyan}Create Trial${NC}"
-echo -e "        ${white}[•2]${NC} ${cyan}Xtend account${NC}"
-echo -e "        ${white}[•3]${NC} ${cyan}Delet account${NC}"
-echo -e "        ${white}[•4]${NC} ${cyan}Cek user${NC}"
-echo -e "        ${yelow}[•0]${NC} ${yelow}Back To Menu${NC}"
-echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
+echo -e ""
+echo -e "\e[33m ┌┌┌┌────────────────────────────────────┐┐┐┐\033[0m"
+echo -e "\e[33m ││││${cyan} .::::.  XRAY / VMESS MENU  .::::.  "\e[33m││││\033[0m"
+echo -e "\e[33m └└└└────────────────────────────────────┘┘┘┘\033[0m"
+echo -e ""
+echo -e "\e[33m    ┌────────────────────────────────────┐\033[0m"
+echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Create trojan${NC}"
+echo -e "\e[33m    │ ${white}[•2]${NC} ${cyan}Create trial${NC}"
+echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}Renew trojan${NC}"
+echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}Delete trojan${NC}"
+echo -e "\e[33m    │ ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
+echo -e "\e[33m    │ ${white}[•0]${NC} ${cyan}Back To Menu${NC}"
+echo -e "\e[33m    └────────────────────────────────────┘\033[0m"
 echo -e "${yelow}"
-read -p " >>>   " opt
+read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
 1) clear ; add-tr ;;
