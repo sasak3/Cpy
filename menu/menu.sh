@@ -219,7 +219,7 @@ echo -e " ${BIYellow} │ ${BICyan}□ Current Domain      =  ${GREEN}$( cat /et
 echo -e " ${BIYellow} │ ${BICyan}□ NS Domain           =  ${GREEN}$(cat /root/nsdomain)${NC}"
 echo -e " ${BIYellow} │ ${BICyan}□ ISP VPS             =  ${GREEN}$ISPVPS${NC}"
 echo -e " ${BIYellow} │ ${BICyan}□ IP-VPS              =  ${GREEN}$IPVPS${NC}"
-echo -e " ${BIYellow} │ ${BICyan}□ User script Exp     = \033[1;36m $Name \e[0m${NC} " ${GREEN}$useexp${NC} Days"
+echo -e " ${BIYellow} │ ${BICyan}□ User script Exp     =  ${GREEN}$useexp${NC}  \033[1;36m $Name \e[0m${NC} "
 echo -e " ${BIYellow} └────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
