@@ -210,9 +210,12 @@ IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e ""
 echo -e ""
-echo -e "   ${BIYellow}   ─────────────────────────────────────────────${NC}"
-echo -e "                 ${BICyan}${BIRed}.::::.  SKY-TUNNEL  .::::.${NC}"
-echo -e "   ${BIYellow}   ───────────────────────────────────────────── ${NC}"
+echo -e "   ${BIYellow}         ╔══╦╗───╔══╗──────────╔╗
+echo -e "   ${BIYellow}         ║══╣╠╦╦╗╚╗╔╬╦═╦╦═╦╦═╦╗╠╬═╦╦═╗
+echo -e "   ${BIYellow}         ╠══║═╣║║─║║║║║║║║║║╩╣╚╣║║║║╬║
+echo -e "   ${BIYellow}         ╚══╩╩╬╗║─╚╩═╩╩═╩╩═╩═╩═╩╩╩═╬╗║
+echo -e "   ${BIYellow}         ─────╚═╝──────────────────╚═╝
+echo -e ""
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │                     INFORMATION                    │ ${NC}"
 echo -e "${BIYellow}  │====================================================│"
