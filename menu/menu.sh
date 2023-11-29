@@ -226,7 +226,7 @@ echo -e " ${BIYellow} │ ${BICyan}□ User script Exp  =  ${GREEN}$useexp${NC} 
 echo -e " ${BIYellow} └────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIPurple}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIPurple}  │  \033[0m ${BOLD}${GREEN}---${BIYellow} SSH${GREEN}  ---  ${BIYellow}VMESS  ${GREEN}---  ${BIYellow}VLESS  ${GREEN}---  ${BIYellow}TROJAN${GREEN} --- $NC "
-echo -e "${BIPurple}  │  \033[0m ${Blue}     $ssh1          $vma           $vla           $tra              $NC"
+echo -e "${BIPurple}  │  \033[0m ${Blue}    $ssh1          $vma           $vla           $tra              $NC"
 echo -e "${BIPurple}  └────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │                     OTHER MENU                     │ ${NC}" 
