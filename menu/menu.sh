@@ -215,7 +215,6 @@ echo -e "   ${BIYellow}         ║══╣╠╦╦╗╚╗╔╬╦═╦╦
 echo -e "   ${BIYellow}         ╠══║═╣║║─║║║║║║║║║║╩╣╚╣║║║║╬║   ${NC}"
 echo -e "   ${BIYellow}         ╚══╩╩╬╗║─╚╩═╩╩═╩╩═╩═╩═╩╩╩═╬╗║   ${NC}"
 echo -e "   ${BIYellow}         ─────╚═╝──────────────────╚═╝   ${NC}"
-echo -e ""
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │                     INFORMATION                    │ ${NC}"
 echo -e "${BIYellow}  │====================================================│"
@@ -249,7 +248,7 @@ echo -e "${BIYellow}  └──────────────────�
 echo -e "${BIRed}                    Version script  3.0.1 ${NC}"
 echo -e "${BOLD}${BIRed}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
 echo
-read -p " Select From Options [ 1 - 12 ] :" opt
+read -p " Select From Options [ 1 - 12 ] : " opt
 echo -e ""
 case $opt in
 1) clear ; menu-sshh ;;
