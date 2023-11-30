@@ -98,12 +98,12 @@ echo -e "${yelow}"
 read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
-1) clear ; addtrgo ;;
-2) clear ; trialtrojango ;;
-3) clear ; renewtrgo ;;
-4) clear ; deltrgo ;;
-5) clear ; cektrgo ;;
-0) clear ; menu ;;
+1) clear ; add-vless ; exit ;;
+2) clear ; trialvless ; exit ;;
+3) clear ; renew-vless ; exit ;;
+4) clear ; del-vless ; exit ;;
+5) clear ; cek-vless ; exit ;;
+0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo "salah tekan" ; sleep 1 ; menu-trojan ;;
 esac
