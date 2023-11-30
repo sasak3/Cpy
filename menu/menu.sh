@@ -231,10 +231,9 @@ echo -e "${BIPurple}  └──────────────────�
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │                     OTHER MENU                     │ ${NC}" 
 echo -e "${BIYellow}  │====================================================│"
-echo -e "${BIYellow}  │${NC}${BICyan} [•1]${NC}${white} SSH${NC}               "   "${BICyan}[•5]${NC}${white} TROJAN-WS${NC}"
-echo -e "${BIYellow}  │${NC}${BICyan} [•2]${NC}${white} VMESS${NC}             "   "${BICyan}[•6]${NC}${white} RESTR SERVICE${NC}"           
-echo -e "${BIYellow}  │${NC}${BICyan} [•3]${NC}${white} VLESS${NC}             "   "${BICyan}[•7]${NC}${white} CHECK RUNNING${NC}"                   
-echo -e "${BIYellow}  │${NC}${BICyan} [•4]${NC}${white} TROJAN-GO${NC}         "   "${BICyan}[•8]${NC}${white} MENU SETINGS${NC}"                         
+echo -e "${BIYellow}  │${NC}${BICyan} [•1]${NC}${white} SSH OVPN MANAGER${NC}        "   "${BICyan}[•4]${NC}${white} TROJAN MANAGER${NC}"
+echo -e "${BIYellow}  │${NC}${BICyan} [•2]${NC}${white} VMESS MANAGER${NC}           "   "${BICyan}[•5]${NC}${white} CHECK RUNNING${NC}"           
+echo -e "${BIYellow}  │${NC}${BICyan} [•3]${NC}${white} VLESS MANAGER${NC}           "   "${BICyan}[•6]${NC}${white} OTHER SETINGS${NC}"                                            
 echo -e "${BIYellow}  └────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BIPurple}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIPurple}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
@@ -248,11 +247,9 @@ case $opt in
 1) clear ; menu-sshh ;;
 2) clear ; menu-vmess ;;
 3) clear ; menu-vless ;;
-4) clear ; menu-trgo ;;
-5) clear ; menu-trojan ;;
-6) clear ; restarts ;;
-7) clear ; running ;;
-8) clear ; menu-set ;;
+4) clear ; menu-trojan ;;
+5) clear ; running ;;
+6) clear ; menu-set ;;
 00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
