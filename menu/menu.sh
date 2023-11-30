@@ -240,13 +240,13 @@ echo -e "${BIPurple}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}K
 echo -e "${BIPurple}  └────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIYellow}                    Version script  3.0.1 ${NC}"
 echo -e "${BOLD}${BIRed}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
-echo
+echo -e ""
 read -p " Select From Options [ 1 - 8 ] : " opt
 echo -e ""
 case $opt in
 1) clear ; menu-sshh ;;
 2) clear ; menu-vmess ;;
-3) clear ; menu-vlesss ;;
+3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
 5) clear ; running ;;
 6) clear ; menu-set ;;
