@@ -246,7 +246,7 @@ echo -e ""
 case $opt in
 1) clear ; menu-sshh ;;
 2) clear ; menu-vmess ;;
-3) clear ; vlas ;;
+3) clear ; menu-vmess ;;
 4) clear ; menu-trojan ;;
 5) clear ; running ;;
 6) clear ; menu-set ;;
