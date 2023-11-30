@@ -74,10 +74,10 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
-echo -e "${purple} ┌─────────────────────────────────────────┐${NC}"
-echo -e "${purple} │${cyann}  .::::.  MENU MANAGER SSH OVPN  .::::.  ${NC}"
-echo -e "${purple} └─────────────────────────────────────────┘${NC}"
-echo -e "${yelow} ┌─────────────────────────────────────────┐${NC}"
+echo -e "${purple} ┌───────────────────────────────────────┐${NC}"
+echo -e "${purple} │${cyann} .::::.  MENU MANAGER SSH OVPN  .::::.  ${NC}"
+echo -e "${purple} └───────────────────────────────────────┘${NC}"
+echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
 echo -e "${yelow} │  ${cyann}[•1]${NC}  ${green}Creating a SSH OVPN Account${NC}"
 echo -e "${yelow} │  ${cyann}[•2]${NC}  ${green}Trial SSH OVPN Account${NC}"
 echo -e "${yelow} │  ${cyann}[•3]${NC}  ${green}Renew SSH OVPN Account${NC}"
@@ -89,8 +89,8 @@ echo -e "${yelow} │  ${cyann}[•8]${NC}  ${green}Autokill SSH OVPN Account${N
 echo -e "${yelow} │  ${cyann}[•9]${NC}  ${green}Check SSH OVPN login Account${NC}"
 echo -e "${yelow} │  ${cyann}[10]${NC}  ${green}Locked SSH OVPN Account${NC}"
 echo -e "${yelow} │  ${cyann}[11]${NC}  ${green}Unlocked SSH OVPN Account${NC}"
-echo -e "${yelow} │  ${white}[•0]${NC}  ${white}Exit SSH OVPN Manager${NC}"
-echo -e "${yelow} └─────────────────────────────────────────┘${NC}"
+echo -e "${yelow} │  ${cyann}[•0]${NC}  ${green}Exit SSH OVPN Manager${NC}"
+echo -e "${yelow} └───────────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select From Options [ 1 - 11 ] : "  opt
 echo -e ""
