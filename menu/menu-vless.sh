@@ -52,6 +52,21 @@ PERMISSION () {
 red='\e[1;31m'
 green='\e[1;32m'
 NC='\e[0m'
+        # background validation
+
+        green_background="\033[42;37m"
+
+        red_background="\033[41;37m"
+
+        # color text 
+
+        yelow="\e[1;33m"
+
+        NC="\033[0m"
+
+        cyan="\e[1;36m"
+
+        white="\e[1;37m"
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 PERMISSION
@@ -64,19 +79,18 @@ else
 red "Permission Denied!"
 exit 0
 fi
-
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
 echo -e "\e[33m ┌┌┌┌────────────────────────────────────┐┐┐┐\033[0m"
-echo -e "\e[33m ││││${cyan} .::::.  XRAY / VLESS MENU  .::::.  \e[33m││││\033[0m"
-echo -e "\e[33m └└└────────────────────────────────────┘┘┘┘\033[0m"
+echo -e "\e[33m ││││${cyan} .::::.  XRAY / VMESS MENU  .::::.  \e[33m││││\033[0m"
+echo -e "\e[33m └└└└────────────────────────────────────┘┘┘┘\033[0m"
 echo -e ""
 echo -e "\e[33m    ┌────────────────────────────────────┐\033[0m"
-echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Create vless${NC}"
+echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
 echo -e "\e[33m    │ ${white}[•2]${NC} ${cyan}Create trial${NC}"
-echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}Renew vless${NC}"
-echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}Delete Vless${NC}"
+echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}Xtendd V2ray${NC}"
+echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}Delete V2ray${NC}"
 echo -e "\e[33m    │ ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
 echo -e "\e[33m    │ ${white}[•0]${NC} ${cyan}Back To Menu${NC}"
 echo -e "\e[33m    └────────────────────────────────────┘\033[0m"
@@ -84,12 +98,12 @@ echo -e "${yelow}"
 read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
-1) clear ; add-vless ; exit ;;
-2) clear ; trialvless ; exit ;;
-3) clear ; renew-vless ; exit ;;
-4) clear ; del-vless ; exit ;;
-5) clear ; cek-vless ; exit ;;
+1) clear ; add-ws ; exit ;;
+2) clear ; trialvmess ; exit ;;
+3) clear ; renew-ws ; exit ;;
+4) clear ; del-ws ; exit ;;
+5) clear ; cek-ws ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo "Anda salah tekan " ; sleep 1 ; menu-ssh ;;
+*) echo "Salah pencet" ; menu-ssh ;;
 esac
