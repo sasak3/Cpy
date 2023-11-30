@@ -231,11 +231,10 @@ echo -e "${BIPurple}  └──────────────────�
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}  │                     OTHER MENU                     │ ${NC}" 
 echo -e "${BIYellow}  │====================================================│"
-echo -e "${BIYellow}  │${NC}${BICyan} [•1]${NC}${white} SSH${NC}               "   "${BICyan}[•6]${NC}${white} CHECK RUNNING${NC}"
-echo -e "${BIYellow}  │${NC}${BICyan} [•2]${NC}${white} VMESS${NC}             "   "${BICyan}[•7]${NC}${white} RESTR SERVICE${NC}"           
-echo -e "${BIYellow}  │${NC}${BICyan} [•3]${NC}${white} VLESS${NC}             "   "${BICyan}[•8]${NC}${white} BACKUP MENU${NC}  "                   
-echo -e "${BIYellow}  │${NC}${BICyan} [•4]${NC}${white} TROJAN-GO${NC}         "   "${BICyan}[•9]${NC}${white} SETTING BOT${NC} "                 
-echo -e "${BIYellow}  │${NC}${BICyan} [•5]${NC}${white} TROJAN-WS${NC}         "   "${BICyan}[10]${NC}${white} MENU SETINGS${NC} "    
+echo -e "${BIYellow}  │${NC}${BICyan} [•1]${NC}${white} SSH${NC}               "   "${BICyan}[•5]${NC}${white} TROJAN-WS${NC}
+echo -e "${BIYellow}  │${NC}${BICyan} [•2]${NC}${white} VMESS${NC}             "   "${BICyan}[•6]${NC}${white} RESTR SERVICE${NC}"           
+echo -e "${BIYellow}  │${NC}${BICyan} [•3]${NC}${white} VLESS${NC}             "   "${BICyan}[•7]${NC}${white} CHECK RUNNING${NC}"                   
+echo -e "${BIYellow}  │${NC}${BICyan} [•4]${NC}${white} TROJAN-GO${NC}         "   "${BICyan}[•8]${NC}${white} MENU SETINGS${NC} "                         
 echo -e "${BIYellow}  └────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BIPurple}  ┌────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIPurple}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
@@ -243,7 +242,7 @@ echo -e "${BIPurple}  └──────────────────�
 echo -e "${BIYellow}                    Version script  3.0.1 ${NC}"
 echo -e "${BOLD}${BIRed}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
 echo
-read -p " Select From Options [1-10] : " opt
+read -p " Select From Options [ 1 - 8 ] : " opt
 echo -e ""
 case $opt in
 1) clear ; menu-sshh ;;
@@ -251,11 +250,9 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trgo ;;
 5) clear ; menu-trojan ;;
-6) clear ; running ;;
-7) clear ; restarts ;;
-8) clear ; menu-backup ;;
-9) clear ; bot ;;
-10) clear ; menu-set ;;
+6) clear ; restarts ;;
+7) clear ; running ;;
+8) clear ; menu-set ;;
 00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
