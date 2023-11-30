@@ -9,42 +9,47 @@ clear
         NC="\033[0m"
         cyan="\e[1;36m"
         white="\e[1;37m"
+        purple='\033[0;35m'
+        green='\e[1;32m'
+
 clear    
 echo -e ""
-echo -e "\e[33m ┌┌┌┌────────────────────────────────────┐┐┐┐\033[0m"
-echo -e "\e[33m ││││${cyann}    .::::.  SYSTEM SETING  .::::.   \e[33m││││\033[0m"
-echo -e "\e[33m └└└└────────────────────────────────────┘┘┘┘\033[0m"
+echo -e "${purple} ┌───────────────────────────────────────┐${NC}"
+echo -e "${purple} │${cyann}     .::::.  SYSTEM SETING  .::::.  ${NC}"
+echo -e "${purple} └───────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌───────────────────────────────────────┐\033[0m"
+echo -e "\e[33m │ ${cyan}[•1]${NC} ${green}Update menu\033[0m"
+echo -e "\e[33m │ ${cyan}[•2]${NC} ${green}Install bot vps\033[0m"
+echo -e "\e[33m │ ${cyan}[•3]${NC} ${green}Seting bot vps\033[0m"
+echo -e "\e[33m │ ${cyan}[•4]${NC} ${green}Menu backup\033[0m"
+echo -e "\e[33m │ ${cyan}[•5]${NC} ${green}ganti Domain vps\033[0m"
+echo -e "\e[33m │ ${cyan}[•6]${NC} ${green}ganti Port\033[0m"
+echo -e "\e[33m │ ${cyan}[•7]${NC} ${green}ganti banner\033[0m"
+echo -e "\e[33m │ ${cyan}[•8]${NC} ${green}Restart service\033[0m"
+echo -e "\e[33m │ ${cyan}[•9]${NC} ${green}Cek bandwith\033[0m"
+echo -e "\e[33m │ ${cyan}[10]${NC} ${green}Atur waktu riset\033[0m"
+echo -e "\e[33m │ ${cyan}[11]${NC} ${green}Speedtest vps\033[0m"
+echo -e "\e[33m │ ${cyan}[12]${NC} ${green}Webmin menu\033[0m"
+echo -e "\e[33m │ ${cyan}[13]${NC} ${green}Tentang Script\033[0m"
+echo -e "\e[33m │ ${cyan}[•0]${NC} ${green}Back To Menu\033[0m"
+echo -e "\e[33m └───────────────────────────────────────┘\033[0m"
 echo -e ""
-echo -e "\e[33m    ┌────────────────────────────────────┐\033[0m"
-echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Update menu\033[0m"
-echo -e "\e[33m    │ ${white}[•2]${NC} ${cyan}Install bot vps\033[0m"
-echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}ganti Domain vps\033[0m"
-echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}ganti Port\033[0m"
-echo -e "\e[33m    │ ${white}[•5]${NC} ${cyan}ganti banner\033[0m"
-echo -e "\e[33m    │ ${white}[•6]${NC} ${cyan}Restart service\033[0m"
-echo -e "\e[33m    │ ${white}[•7]${NC} ${cyan}Cek bandwith\033[0m"
-echo -e "\e[33m    │ ${white}[•8]${NC} ${cyan}Atur waktu riset\033[0m"
-echo -e "\e[33m    │ ${white}[•9]${NC} ${cyan}Speedtest vps\033[0m"
-echo -e "\e[33m    │ ${white}[10]${NC} ${cyan}Webmin menu\033[0m"
-echo -e "\e[33m    │ ${white}[11]${NC} ${cyan}Tentang Script\033[0m"
-echo -e "\e[33m    │ ${white}[•0]${NC} ${cyan}Back To Menu\033[0m"
-echo -e "\e[33m    └────────────────────────────────────┘\033[0m"
-echo -e ""
-echo -e "${yellow}"
-read -p " Select From Options [1-11] : "  opt
+read -p " Select From Options [ 1 - 13 ] : "  opt
 echo -e ""
 case $opt in
 1) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/heruahmad1/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
 2) clear ; wget https://raw.githubusercontent.com/heruahmad1/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
-3) clear ; menu-domain ; exit ;;
-4) clear ; port-change ; exit ;;
-5) clear ; nano /etc/issue.net ; exit ;;  #ssh-vpn banner.conf
-5) clear ; restarts ; exit ;;
-7) clear ; bw ; exit ;;
-8) clear ; auto-reboot ; exit ;;
-9) clear ; speedtest ; exit ;;
-10) clear ; menu-webmin ; exit ;; 
-11) clear ; about ; exit ;;
+3) clear ; bot ;;
+4) clear ; menu-backup ;;
+5) clear ; menu-domain ; exit ;;
+6) clear ; port-change ; exit ;;
+7) clear ; nano /etc/issue.net ; exit ;;  #ssh-vpn banner.conf
+8) clear ; restarts ; exit ;;
+9) clear ; bw ; exit ;;
+10) clear ; auto-reboot ; exit ;;
+11) clear ; speedtest ; exit ;;
+12) clear ; menu-webmin ; exit ;; 
+13) clear ; about ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "salah pencet taiii" ; sleep 1 ; menu-set ;;
