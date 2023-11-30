@@ -98,11 +98,11 @@ echo -e "${yelow}"
 read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
-1) clear ; add-ws ; exit ;;
-2) clear ; trialvmess ; exit ;;
-3) clear ; renew-ws ; exit ;;
-4) clear ; del-ws ; exit ;;
-5) clear ; cek-ws ; exit ;;
+1) clear ; add-vless ; exit ;;
+2) clear ; trialvless ; exit ;;
+3) clear ; renew-vless ; exit ;;
+4) clear ; del-vless ; exit ;;
+5) clear ; cek-vless ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo "Salah pencet" ; menu-ssh ;;
