@@ -52,6 +52,7 @@ PERMISSION () {
 red='\e[1;31m'
 green='\e[1;32m'
 NC='\e[0m'
+purple='\033[0;35m'
         # background validation
 
         green_background="\033[42;37m"
@@ -67,6 +68,8 @@ NC='\e[0m'
         cyan="\e[1;36m"
 
         white="\e[1;37m"
+
+        purple='\033[0;35m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 PERMISSION
@@ -82,20 +85,24 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear 
 echo -e ""
-echo -e "\e[33m ┌┌┌┌────────────────────────────────────┐┐┐┐\033[0m"
-echo -e "\e[33m ││││${cyan}   .::::.  TROJAN-WS MENU  .::::.   \e[33m││││\033[0m"
-echo -e "\e[33m └└└└────────────────────────────────────┘┘┘┘\033[0m"
+echo -e "${purple} ┌───────────────────────────────────────┐${NC}"
+echo -e "${purple} │${cyann}  .::::.  MENU MANAGER TROJAN  .::::.  ${NC}"
+echo -e "${purple} └───────────────────────────────────────┘${NC}"
+echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
+echo -e "${yelow} │  ${cyann}[•1]${NC}  ${green}Creating trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•2]${NC}  ${green}Trial trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•3]${NC}  ${green}Renew trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•4]${NC}  ${green}Delete trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•5]${NC}  ${green}Check trojan-ws login Account${NC}"
+echo -e "${yelow} │  ${cyann}[•6]${NC}  ${green}Creating trojan-go Account${NC}"
+echo -e "${yelow} │  ${cyann}[•7]${NC}  ${green}Trial trojan-go acount${NC}"
+echo -e "${yelow} │  ${cyann}[•8]${NC}  ${green}Renew trojan-go Account${NC}"
+echo -e "${yelow} │  ${cyann}[•9]${NC}  ${green}Delete trojan-go Account${NC}"
+echo -e "${yelow} │  ${cyann}[10]${NC}  ${green}Check trojan-go login Account${NC}"
+echo -e "${yelow} │  ${cyann}[•0]${NC}  ${green}Exit trojan Manager${NC}"
+echo -e "${yelow} └───────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "\e[33m    ┌────────────────────────────────────┐\033[0m"
-echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Create trojan${NC}"
-echo -e "\e[33m    │ ${white}[•2]${NC} ${cyan}Create trial${NC}"
-echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}Renew trojan${NC}"
-echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}Delete trojan${NC}"
-echo -e "\e[33m    │ ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
-echo -e "\e[33m    │ ${white}[•0]${NC} ${cyan}Back To Menu${NC}"
-echo -e "\e[33m    └────────────────────────────────────┘\033[0m"
-echo -e "${yelow}"
-read -p "  Select From Options [1-5] : " opt
+read -p " Select From Options [ 1 - 10 ] : "  opt
 echo -e ""
 case $opt in
 1) clear ; add-tr ;;
@@ -103,6 +110,11 @@ case $opt in
 3) clear ; renew-tr ;;
 4) clear ; del-tr ;;
 5) clear ; cek-tr ;;
+6) clear ; addtrgo ;;
+7) clear ; trialtrojango ;;
+8) clear ; renewtrgo ;;
+9) clear ; deltrgo ;;
+10) clear ; cektrgo ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo "Boh salah tekan, Sayang kedak Babi" ; sleep 1 ; menu-trojan ;;
