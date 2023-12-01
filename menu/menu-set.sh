@@ -48,9 +48,10 @@ case $opt in
 10) clear ; auto-reboot ; exit ;;
 11) clear ; speedtest ; exit ;;
 12) clear ; reboot ; exit ;;
-13) clear ; bw ; exit ;;
+13) clear ; backup ; exit ;;
 14) clear ; clearcache ; exit ;;
-15) clear ; bokap ; exit ;;
+15) clear ; restore ; exit ;;
+16) clear ; autobackup ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "salah pencet taiii" ; sleep 1 ; menu-set ;;
