@@ -28,7 +28,7 @@ echo -e "${ye} │ ${cy}•9)${NC} Restart Xray${NC}"
 echo -e "${ye} │ ${cy}10)${NC} Restart Websocket${NC}"
 echo -e "${ye} │ ${cy}11)${NC} Restart Trojan Go${NC}"
 echo -e "${ye} │ ${cy}•0)${NC} Back To Menu${NC}"
-echo -e "${ye}"└────────────────────────────────┘${NC}"
+echo -e "${ye} └────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select From Options [ 1 - 11 ] :   " Restart
 echo -e ""
