@@ -29,8 +29,7 @@ echo -e "\e[33m │ ${cyan}[•8]${NC} ${green}Restart all service\033[0m"
 echo -e "\e[33m │ ${cyan}[•9]${NC} ${green}Bandwith information\033[0m"
 echo -e "\e[33m │ ${cyan}[10]${NC} ${green}Chnge time reset\033[0m"
 echo -e "\e[33m │ ${cyan}[11]${NC} ${green}Speedtest server\033[0m"
-echo -e "\e[33m │ ${cyan}[12]${NC} ${green}Webmin menu\033[0m"
-echo -e "\e[33m │ ${cyan}[13]${NC} ${green}About Script\033[0m"
+echo -e "\e[33m │ ${cyan}[11]${NC} ${green}Reboot server\033[0m"
 echo -e "\e[33m │ ${cyan}[•0]${NC} ${green}Back To Menu\033[0m"
 echo -e "\e[33m └──────────────────────────────────┘\033[0m"
 echo -e ""
@@ -48,8 +47,7 @@ case $opt in
 9) clear ; bw ; exit ;;
 10) clear ; auto-reboot ; exit ;;
 11) clear ; speedtest ; exit ;;
-12) clear ; menu-webmin ; exit ;; 
-13) clear ; about ; exit ;;
+12) clear ; reboot ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "salah pencet taiii" ; sleep 1 ; menu-set ;;
