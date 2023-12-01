@@ -67,6 +67,8 @@ NC='\e[0m'
         cyan="\e[1;36m"
 
         white="\e[1;37m"
+
+        purple='\033[0;35m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 PERMISSION
@@ -82,19 +84,18 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear 
 echo -e ""
-echo -e "\e[33m ┌┌┌┌────────────────────────────────────┐┐┐┐\033[0m"
-echo -e "\e[33m ││││${cyan}   .::::.  TROJAN-GO MENU  .::::.   \e[33m││││\033[0m"
-echo -e "\e[33m └└└└────────────────────────────────────┘┘┘┘\033[0m"
+echo -e "${purple} ┌───────────────────────────────────────┐${NC}"
+echo -e "${purple} │${cyann}    .::::.  MENU MANAGER VLESS  .::::.  ${NC}"
+echo -e "${purple} └───────────────────────────────────────┘${NC}"
+echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
+echo -e "${yelow} │  ${cyann}[•1]${NC}  ${green}Creating VLESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•2]${NC}  ${green}Trial VLESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•3]${NC}  ${green}Renew VLESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•4]${NC}  ${green}Delete VLESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•5]${NC}  ${green}Check VLESS login Account${NC}"
+echo -e "${yelow} │  ${cyann}[•0]${NC}  ${green}Exit VLESS manager${NC}"
+echo -e "${yelow} └───────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "\e[33m    ┌────────────────────────────────────┐\033[0m"
-echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Create trojan-go${NC}"
-echo -e "\e[33m    │ ${white}[•2]${NC} ${cyan}Create trial${NC}"
-echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}Renew trojan-go${NC}"
-echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}Delete trojan-go${NC}"
-echo -e "\e[33m    │ ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
-echo -e "\e[33m    │ ${white}[•0]${NC} ${cyan}Back To Menu${NC}"
-echo -e "\e[33m    └────────────────────────────────────┘\033[0m"
-echo -e "${yelow}"
 read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
