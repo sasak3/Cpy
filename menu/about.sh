@@ -1,54 +1,83 @@
-#!/bin/bash
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-aureb=$(cat /home/re_otm)
 clear
-echo " "
-echo "===============-[ SKY-TUNNEL COMMUNITY ]-=============="
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo ""
-echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenSSH		: 22"  | tee -a log-install.txt
-echo "   - SSH Websocket	: 80 [ON]" | tee -a log-install.txt
-echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
-echo "   - Stunnel4		: 447, 777" | tee -a log-install.txt
-echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
-echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
-echo "   - Nginx		: 81" | tee -a log-install.txt
-echo "   - Vmess TLS		: 443" | tee -a log-install.txt
-echo "   - Vmess None TLS	: 80" | tee -a log-install.txt
-echo "   - Vless TLS		: 443" | tee -a log-install.txt
-echo "   - Vless None TLS	: 80" | tee -a log-install.txt
-echo "   - Trojan GRPC        : 443" | tee -a log-install.txt
-echo "   - Trojan WS		: 443" | tee -a log-install.txt
-echo "   - Trojan Go		: 443" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
-echo "   - Dflate		: [ON]"  | tee -a log-install.txt
-echo "   - IPtables		: [ON]"  | tee -a log-install.txt
-echo "   - Auto-Reboot	: [ON]"  | tee -a log-install.txt
-echo "   - IPv6		: [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On	: $aureb:00 $gg GMT +7" | tee -a log-install.txt
-echo "   - AutoKill Multi Login User" | tee -a log-install.txt
-echo "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo "   - Fully automatic script" | tee -a log-install.txt
-echo "   - VPS settings" | tee -a log-install.txt
-echo "   - Admin Control" | tee -a log-install.txt
-echo "   - Change port" | tee -a log-install.txt
-echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo "==========-[ Script Created By HR-VPN ]-==========="
-echo -e ""
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+plain='\033[0m'
+blue='\033[0;34m'
+ungu='\033[1;35m'
+Green="\033[1;32m"
+Red="\033[31m"
+WhiteB="\e[5;37m"
+BlueCyan="\e[5;36m"
+Green_background="\033[42;37m"
+Red_background="\033[41;37m"
+cyan="\e[1;36m"
+Suffix="\033[0m"
+green_background="\033[42;37m"
+red_background="\033[41;37m"
 
+echo -e "${purple} ┌───────────────────────────────┐${NC}"
+echo -e "${purple} │${blue} .::::.  MENU BACKUP   .::::.  ${NC}"
+echo -e "${purple} └───────────────────────────────┘${NC}"
+echo
+echo -e "${yellow} ┌───────────────────────────────┐${NC}"
+echo "     [1]. Backup"
+echo "     [2]. Restore"
+echo "     [3]. strt"
+echo "     [4]. limit speed"
+echo "     [5]. auto backup"
+echo -e "${yellow} └───────────────────────────────┘${NC}"
+echo
+echo -e "${cyan}"
+read -p    "( 1 - 5 )  " bro
 
+if [ $bro = 1 ] || [ $bro = 1 ]
+then
+figlet "backup"
+backup
+echo "${yellow} ┌───────────────────────────────────────────────┐"
+echo
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo
+echo "${yellow} └───────────────────────────────────────────────┘"
+fi
 
+if [ $bro = 2 ] || [ $bro = 2 ]
+then
+figlet "Restore" | lolcat
+restore
+echo "${yellow} ┌───────────────────────────────────────────────┐"
+echo
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo
+echo "${yellow} └───────────────────────────────────────────────┘"
+fi
+if [ $bro = 3 ] || [ $bro = 3 ]
+then
+figlet "strt"
+strt
+echo "${yellow} ┌───────────────────────────────────────────────┐"
+echo
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo
+echo "${yellow} └───────────────────────────────────────────────┘"
+fi
+if [ $bro = 4 ] || [ $bro = 4 ]
+then
+limitspeed
+echo "${yellow} ┌───────────────────────────────────────────────┐"
+echo
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo
+echo "${yellow} └───────────────────────────────────────────────┘"
+fi
+
+if [ $bro = 5 ] || [ $bro = 5 ]
+then
+autobackup
+echo "${yellow} ┌───────────────────────────────────────────────┐"
+echo
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo
+echo "${yellow} └───────────────────────────────────────────────┘"
+fi
