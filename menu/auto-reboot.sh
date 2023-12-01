@@ -18,10 +18,10 @@ else
 gg="AM"
 fi
 
-echo -e "\e[1;37mAUTOREBOOT\033[0m"
 echo -e ""
-echo -e "
-    ${green}Example :${NC}
+echo -e "\e[1;37m AUTOREBOOT SETING\033[0m"
+echo -e ""
+    ${NC}Example :${NC}
     0     = 12 PM
     12    = 12 AM
     13-23 = 1 AM - 11 PM
@@ -32,7 +32,7 @@ echo -e "     ${green}Current : $aureb $gg ${NC}"
 echo -e "└───────────────────────────────────┘" | lolcat
 
 while :; do
-  read -p "Input >>> 0 - 23 : " tr2
+  read -p "Select From Options [ 0 - 23 ] : " tr2
   [[ $tr2 =~ ^[0-9]+$ ]] || { echo -ne; continue; }
   if ((tr2 >= 0 && tr2 <= 23)); then
     echo -ne
