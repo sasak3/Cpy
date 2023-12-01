@@ -16,67 +16,68 @@ Suffix="\033[0m"
 green_background="\033[42;37m"
 red_background="\033[41;37m"
 
-echo -e "${red_background}Menu Backup${NC}"
+echo -e "${purple} ┌───────────────────────────────┐${NC}"
+echo -e "${purple} │${blue} .::::.  MENU BACKUP   .::::.  ${NC}"
+echo -e "${purple} └───────────────────────────────┘${NC}"
 echo
-echo
-echo "1).Backup"
-echo "2).Restore"
-echo "3).strt"
-echo "4).limit speed"
-echo "5).autobackup"
-echo
-echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
+echo -e "${yellow} ┌───────────────────────────────┐${NC}"
+echo "     [1]. Backup"
+echo "     [2]. Restore"
+echo "     [3]. strt"
+echo "     [4]. limit speed"
+echo "     [5]. auto backup"
+echo -e "${yellow} └───────────────────────────────┘${NC}"
 echo
 echo -e "${cyan}"
-read -p    "└╼>>>  " bro
+read -p    "( 1 - 5 )  " bro
 
 if [ $bro = 1 ] || [ $bro = 1 ]
 then
 figlet "backup"
 backup
-echo "--------------------------------------------------------"
+echo "${yellow} ┌───────────────────────────────────────────────┐"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
 echo
-echo "--------------------------------------------------------"
+echo "${yellow} └───────────────────────────────────────────────┘"
 fi
 
 if [ $bro = 2 ] || [ $bro = 2 ]
 then
 figlet "Restore" | lolcat
 restore
-echo "--------------------------------------------------------"
+echo "${yellow} ┌───────────────────────────────────────────────┐"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
 echo
-echo "--------------------------------------------------------"
+echo "${yellow} └───────────────────────────────────────────────┘"
 fi
 if [ $bro = 3 ] || [ $bro = 3 ]
 then
 figlet "strt"
 strt
-echo "--------------------------------------------------------"
+echo "${yellow} ┌───────────────────────────────────────────────┐"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
 echo
-echo "--------------------------------------------------------"
+echo "${yellow} └───────────────────────────────────────────────┘"
 fi
 if [ $bro = 4 ] || [ $bro = 4 ]
 then
 limitspeed
-echo "--------------------------------------------------------"
+echo "${yellow} ┌───────────────────────────────────────────────┐"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
 echo
-echo "--------------------------------------------------------"
+echo "${yellow} └───────────────────────────────────────────────┘"
 fi
 
 if [ $bro = 5 ] || [ $bro = 5 ]
 then
 autobackup
-echo "--------------------------------------------------------"
+echo "${yellow} ┌───────────────────────────────────────────────┐"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
+echo "${blue}   Terimakasih sudah menggunakan layanan Premium SKY-TUNNEL"
 echo
-echo "--------------------------------------------------------"
+echo "${yellow} └───────────────────────────────────────────────┘"
 fi
