@@ -21,6 +21,7 @@ fi
 echo -e ""
 echo -e "\e[1;37m AUTOREBOOT SETING\033[0m"
 echo -e ""
+echo -e "
     ${NC}Example :${NC}
     0     = 12 PM
     12    = 12 AM
