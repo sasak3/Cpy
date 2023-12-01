@@ -39,7 +39,7 @@ case $opt in
 1) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/heruahmad1/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
 2) clear ; wget https://raw.githubusercontent.com/heruahmad1/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
 3) clear ; bot ;;
-4) clear ; about ;;
+4) clear ; menu-backup ;;
 5) clear ; menu-domain ; exit ;;
 6) clear ; port-change ; exit ;;
 7) clear ; nano /etc/issue.net ; exit ;;  #ssh-vpn banner.conf
@@ -48,6 +48,8 @@ case $opt in
 10) clear ; auto-reboot ; exit ;;
 11) clear ; speedtest ; exit ;;
 12) clear ; reboot ; exit ;;
+13) clear ; bw ; exit ;;
+14) clear ; clearcache ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "salah pencet taiii" ; sleep 1 ; menu-set ;;
