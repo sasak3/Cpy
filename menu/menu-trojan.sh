@@ -85,22 +85,22 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear 
 echo -e ""
-echo -e "${purple} ┌───────────────────────────────────────┐${NC}"
-echo -e "${purple} │${cyann}  .::::.  MENU MANAGER TROJAN  .::::.  ${NC}"
-echo -e "${purple} └───────────────────────────────────────┘${NC}"
 echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
-echo -e "${yelow} │  ${cyann}[•1]${NC}  ${green}Creating trojan-ws Account${NC}"
-echo -e "${yelow} │  ${cyann}[•2]${NC}  ${green}Trial trojan-ws Account${NC}"
-echo -e "${yelow} │  ${cyann}[•3]${NC}  ${green}Renew trojan-ws Account${NC}"
-echo -e "${yelow} │  ${cyann}[•4]${NC}  ${green}Delete trojan-ws Account${NC}"
-echo -e "${yelow} │  ${cyann}[•5]${NC}  ${green}Check trojan-ws login Account${NC}"
+echo -e "${yelow} │${cyann}  .::::.  MENU MANAGER TROJAN  .::::.  ${NC}"
+echo -e "${yelow} └───────────────────────────────────────┘${NC}"
+echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
+echo -e "${yelow} │  ${cyann}[•1]${NC}  Creating trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•2]${NC}  Trial trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•3]${NC}  Renew trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•4]${NC}  Delete trojan-ws Account${NC}"
+echo -e "${yelow} │  ${cyann}[•5]${NC}  Check trojan-ws login Account${NC}"
 echo -e "${yelow} │────────────────────────────────────────${NC}"
-echo -e "${yelow} │  ${cyann}[•6]${NC}  ${green}Creating trojan-go Account${NC}"
-echo -e "${yelow} │  ${cyann}[•7]${NC}  ${green}Trial trojan-go acount${NC}"
-echo -e "${yelow} │  ${cyann}[•8]${NC}  ${green}Renew trojan-go Account${NC}"
-echo -e "${yelow} │  ${cyann}[•9]${NC}  ${green}Delete trojan-go Account${NC}"
-echo -e "${yelow} │  ${cyann}[10]${NC}  ${green}Check trojan-go login Account${NC}"
-echo -e "${yelow} │  ${cyann}[•0]${NC}  ${green}Exit trojan Manager${NC}"
+echo -e "${yelow} │  ${cyann}[•6]${NC}  Creating trojan-go Account${NC}"
+echo -e "${yelow} │  ${cyann}[•7]${NC}  Trial trojan-go acount${NC}"
+echo -e "${yelow} │  ${cyann}[•8]${NC}  Renew trojan-go Account${NC}"
+echo -e "${yelow} │  ${cyann}[•9]${NC}  Delete trojan-go Account${NC}"
+echo -e "${yelow} │  ${cyann}[10]${NC}  Check trojan-go login Account${NC}"
+echo -e "${yelow} │  ${cyann}[•0]${NC}  Exit trojan Manager${NC}"
 echo -e "${yelow} └───────────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select From Options [ 1 - 10 ] : "  opt
@@ -118,5 +118,5 @@ case $opt in
 10) clear ; cektrgo ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo "Boh salah tekan, Sayang kedak Babi" ; sleep 1 ; menu-trojan ;;
+*) echo "Salah tekan" ; sleep 1 ; menu-trojan ;;
 esac
