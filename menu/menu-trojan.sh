@@ -94,6 +94,7 @@ echo -e "${yelow} │  ${cyann}[•2]${NC}  ${green}Trial trojan-ws Account${NC}
 echo -e "${yelow} │  ${cyann}[•3]${NC}  ${green}Renew trojan-ws Account${NC}"
 echo -e "${yelow} │  ${cyann}[•4]${NC}  ${green}Delete trojan-ws Account${NC}"
 echo -e "${yelow} │  ${cyann}[•5]${NC}  ${green}Check trojan-ws login Account${NC}"
+echo -e "${yelow} │────────────────────────────────────────${NC}"
 echo -e "${yelow} │  ${cyann}[•6]${NC}  ${green}Creating trojan-go Account${NC}"
 echo -e "${yelow} │  ${cyann}[•7]${NC}  ${green}Trial trojan-go acount${NC}"
 echo -e "${yelow} │  ${cyann}[•8]${NC}  ${green}Renew trojan-go Account${NC}"
