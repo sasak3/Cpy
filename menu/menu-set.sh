@@ -50,6 +50,7 @@ case $opt in
 12) clear ; reboot ; exit ;;
 13) clear ; bw ; exit ;;
 14) clear ; clearcache ; exit ;;
+15) clear ; bokap ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "salah pencet taiii" ; sleep 1 ; menu-set ;;
