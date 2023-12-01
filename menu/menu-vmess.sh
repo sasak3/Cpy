@@ -84,16 +84,16 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
-echo -e "${purple} ┌───────────────────────────────────────┐${NC}"
-echo -e "${purple} │${cyann}    .::::.  MENU MANAGER VMESS  .::::.  ${NC}"
-echo -e "${purple} └───────────────────────────────────────┘${NC}"
 echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
-echo -e "${yelow} │  ${cyann}[•1]${NC}  ${green}Creating VMESS Account${NC}"
-echo -e "${yelow} │  ${cyann}[•2]${NC}  ${green}Trial VMESS Account${NC}"
-echo -e "${yelow} │  ${cyann}[•3]${NC}  ${green}Renew VMESS Account${NC}"
-echo -e "${yelow} │  ${cyann}[•4]${NC}  ${green}Delete VMESS Account${NC}"
-echo -e "${yelow} │  ${cyann}[•5]${NC}  ${green}Check VMESS login Account${NC}"
-echo -e "${yelow} │  ${cyann}[•0]${NC}  ${green}Exit VMESS manager${NC}"
+echo -e "${yelow} │${cyann}    .::::.  MENU MANAGER VMESS  .::::.  ${NC}"
+echo -e "${yelow} └───────────────────────────────────────┘${NC}"
+echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
+echo -e "${yelow} │  ${cyann}[•1]${NC}  Creating VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•2]${NC}  Trial VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•3]${NC}  Renew VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•4]${NC}  Delete VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•5]${NC}  Check VMESS login Account${NC}"
+echo -e "${yelow} │  ${cyann}[•0]${NC}  Exit VMESS manager${NC}"
 echo -e "${yelow} └───────────────────────────────────────┘${NC}"
 echo -e ""
 read -p "  Select From Options [1-5] : " opt
@@ -106,5 +106,5 @@ case $opt in
 5) clear ; cek-ws ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo "Salah pencet" ; menu-ssh ;;
+*) echo "Salah tekan" ; menu-ssh ;;
 esac
