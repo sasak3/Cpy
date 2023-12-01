@@ -67,6 +67,8 @@ NC='\e[0m'
         cyan="\e[1;36m"
 
         white="\e[1;37m"
+
+        purple='\033[0;35m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 PERMISSION
@@ -82,19 +84,18 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
-echo -e "\e[33m ┌┌┌┌────────────────────────────────────┐┐┐┐\033[0m"
-echo -e "\e[33m ││││${cyan} .::::.  XRAY / VMESS MENU  .::::.  \e[33m││││\033[0m"
-echo -e "\e[33m └└└└────────────────────────────────────┘┘┘┘\033[0m"
+echo -e "${purple} ┌───────────────────────────────────────┐${NC}"
+echo -e "${purple} │${cyann}    .::::.  MENU MANAGER VMESS  .::::.  ${NC}"
+echo -e "${purple} └───────────────────────────────────────┘${NC}"
+echo -e "${yelow} ┌───────────────────────────────────────┐${NC}"
+echo -e "${yelow} │  ${cyann}[•1]${NC}  ${green}Creating VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•2]${NC}  ${green}Trial VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•3]${NC}  ${green}Renew VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•4]${NC}  ${green}Delete VMESS Account${NC}"
+echo -e "${yelow} │  ${cyann}[•5]${NC}  ${green}Check VMESS login Account${NC}"
+echo -e "${yelow} │  ${cyann}[•0]${NC}  ${green}Exit VMESS manager${NC}"
+echo -e "${yelow} └───────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "\e[33m    ┌────────────────────────────────────┐\033[0m"
-echo -e "\e[33m    │ ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
-echo -e "\e[33m    │ ${white}[•2]${NC} ${cyan}Create trial${NC}"
-echo -e "\e[33m    │ ${white}[•3]${NC} ${cyan}Xtendd V2ray${NC}"
-echo -e "\e[33m    │ ${white}[•4]${NC} ${cyan}Delete V2ray${NC}"
-echo -e "\e[33m    │ ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
-echo -e "\e[33m    │ ${white}[•0]${NC} ${cyan}Back To Menu${NC}"
-echo -e "\e[33m    └────────────────────────────────────┘\033[0m"
-echo -e "${yelow}"
 read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
