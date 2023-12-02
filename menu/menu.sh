@@ -241,7 +241,7 @@ echo -e "${BIPurple}  └──────────────────�
 echo -e "${BIYellow}                    Version script  3.0.1 ${NC}"
 echo -e "${BOLD}${BIRed}                 ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
 echo -e ""
-read -p " Select From Options [ 1 - 8 ] : " opt
+read -p " Select From Options [ 1 - 6 ] : " opt
 echo -e ""
 case $opt in
 1) clear ; menu-sshh ;;
