@@ -123,7 +123,7 @@ echo ""
 wget -q https://raw.githubusercontent.com/artanodrop/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-yellow "Add Domain for vmess/vless/trojan dll"
+yellow " Add Domain for ssh/vmess/vless/trojan dll"
 #echo " "
 #read -rp "Input ur domain : " -e pp
    # if [ -z $pp ]; then
@@ -139,13 +139,13 @@ yellow "Add Domain for vmess/vless/trojan dll"
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
     
-echo -e "$white\033[0;34m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m  .::::.  INSTALL DOMAIN  .::::.  \033[0m"
-echo -e "$white\033[0;34m └─────────────────────────────────────────┘${NC}"
-echo " 1. Use Domain Script HR-VPN"
-echo " 2. Use Domain Script BROTHER-SSH"
-echo " 3. Use Private Domain "
-echo -e "$white\033[0;34m └─────────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
+echo -e "\e[33m │\e[1;36m     .::::.  INSTALL DOMAIN  .::::.  \033[0m"
+echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
+echo "   1. Use Domain Script HR-VPN"
+echo "   2. Use Domain Script BROTHER-SSH"
+echo "   3. Use Private Domain "
+echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 echo -e""
 read -rp "Choose Your Domain Installation : " dom 
 
@@ -177,16 +177,16 @@ wget https://raw.githubusercontent.com/vlukss/Premium/main/cfslow.sh && chmod +x
 rm -f /root/cfslow.sh
 
 #install ssh ovpn
-echo -e "$white\033[0;34m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m  .::::.  INSTALL SSH OVPN  .::::.  \033[0m"
-echo -e "$white\033[0;34m └─────────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
+echo -e "\e[33m │\e[1;36m     .::::.  INSTALL SSH OVPN  .::::.  \033[0m"
+echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 1
 clear
 wget https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
-echo -e "$white\033[0;34m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m  .::::.  INSTALL X-RAY  .::::.  \033[0m"
-echo -e "$white\033[0;34m └─────────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
+echo -e "\e[33m │\e[1;36m      .::::.  INSTALL X-RAY  .::::.  \033[0m"
+echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 1
 clear
 wget https://raw.githubusercontent.com/heruahmad1/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
@@ -194,26 +194,26 @@ wget https://raw.githubusercontent.com/heruahmad1/v4/main/Sshws/insshws.sh && ch
 clear
 #pasang rc clone ssh ovpn 
 ### Pasang Rclone
-echo -e "$white\033[0;34m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m .::::.  INSTALL AUTO BACKUP  .::::.  \033[0m"
-echo -e "$white\033[0;34m └─────────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
+echo -e "\e[33m │\e[1;36m    .::::.  INSTALL AUTO BACKUP  .::::.  \033[0m"
+echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/heruahmad1/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
 clear   
 #Instal slowdns
 ### Pasang SlowDNS
-echo -e "$white\033[0;34m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m  .::::.  INSTALL SLOWDNS  .::::.  \033[0m"
-echo -e "$white\033[0;34m └─────────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
+echo -e "\e[33m │\e[1;36m      .::::.  INSTALL SLOWDNS  .::::.  \033[0m"
+echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget -q -O slow.sh https://raw.githubusercontent.com/vlukss/Premium/main/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 #Instal udp
-echo -e "$white\033[0;34m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m    .::::.  INSTALL UDP  .::::.  \033[0m"
-echo -e "$white\033[0;34m └─────────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
+echo -e "\e[33m │\e[1;36m         .::::.  INSTALL UDP  .::::.  \033[0m"
+echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp.sh
@@ -255,12 +255,9 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo -e "$white\033[0;34m    ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "\e[33m    │\e[1;36m    .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
-echo -e "$white\033[0;34m    └─────────────────────────────────────────────────┘${NC}"
-echo ""
-echo "   ------------------------------------------------------------"
-echo ""
+echo -e "\e[33m  ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "\e[33m  │\e[1;36m      .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
+echo -e "\e[33m  └─────────────────────────────────────────────────┘${NC}"
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH		: 22"  | tee -a log-install.txt
@@ -294,8 +291,6 @@ echo "   - VPS settings" | tee -a log-install.txt
 echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""
-echo ""
 echo "    ------------------------------------------------------------"
 echo ""
 echo "      ===============-[ Script By HR-store ]-==============="
