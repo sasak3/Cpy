@@ -85,14 +85,12 @@ echo -e "${yelow} │  ${cyann}[•4]${NC}  Delete SSH OVPN Account${NC}"
 echo -e "${yelow} │  ${cyann}[•5]${NC}  Check SSH OVPN login Account${NC}"
 echo -e "${yelow} │  ${cyann}[•6]${NC}  Member SSH OVPN Account${NC}"
 echo -e "${yelow} │  ${cyann}[•7]${NC}  Delete SSH OVPN Expired${NC}"
-echo -e "${yelow} │  ${cyann}[•8]${NC}  Autokill SSH OVPN Account${NC}"
-echo -e "${yelow} │  ${cyann}[•9]${NC}  Check SSH OVPN login Account${NC}"
-echo -e "${yelow} │  ${cyann}[10]${NC}  Locked SSH OVPN Account${NC}"
-echo -e "${yelow} │  ${cyann}[11]${NC}  Unlocked SSH OVPN Account${NC}"
+echo -e "${yelow} │  ${cyann}[•8]${NC}  Locked SSH OVPN Account${NC}"
+echo -e "${yelow} │  ${cyann}[•9]${NC}  Unlocked SSH OVPN Account${NC}"
 echo -e "${yelow} │  ${cyann}[•0]${NC}  Exit SSH OVPN Manager${NC}"
 echo -e "${yelow} └───────────────────────────────────────┘${NC}"
 echo -e ""
-read -p " Select From Options [ 1 - 11 ] : "  opt
+read -p " Select From Options [ 1 - 9 ] : "  opt
 echo -e ""
 case $opt in
 1) clear ; usernew ; exit ;;
@@ -102,10 +100,8 @@ case $opt in
 5) clear ; cek ; exit ;;
 6) clear ; member ; exit ;;
 7) clear ; delete ; exit ;;
-8) clear ; autokill ; exit ;;
-9) clear ; ceklim ; exit ;;
-10) clear ; user-lock ; exit ;;
-11) clear ; user-unlock ; exit ;;
+8) clear ; user-lock ; exit ;;
+9) clear ; user-unlock ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu-ssh ;;
