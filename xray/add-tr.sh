@@ -29,7 +29,7 @@ echo -e ""
 clear
 		echo -e ""
                 echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
-                echo -e "\e[33m │\e[1;36m.::::.  ADD XRAY/VMESS ACOUNT  .::::.  \033[0m"
+                echo -e "\e[33m │\e[1;36m.::::.  ADD TROJAN ACOUNT  .::::.  \033[0m"
                 echo -e "\e[33m └───────────────────────────────────┘\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
