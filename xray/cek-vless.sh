@@ -16,9 +16,10 @@ LIGHT='\033[0;37m'
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^####' | cut -d ' ' -f 2`);
-echo "----------------------------------------";
-echo "---------=[ Vless User Login ]=---------";
-echo "----------------------------------------";
+echo ""
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;36m   Xray/Vless User login  \033[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -44,13 +45,12 @@ else
 jum2=$(cat /tmp/ipvless.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo "----------------------------------------"
-fi
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 rm -rf /tmp/ipvless.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "----------------------------------------"
-echo "Script Mod By ARTA M"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo "Script Mod By HR-store"
 rm -rf /tmp/other.txt
