@@ -67,9 +67,11 @@ fi
 echo -e "\e[1;32mloading...\e[0m"
 clear
 echo " "
+echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
+echo -e "\e[33m │\e[1;36m .::::.  UNLOCK SSH OVPN  .::::.  \033[0m"
+echo -e "\e[33m └───────────────────────────────────┘\033[0m"
 echo " "
-echo " "
-read -p "Input USERNAME to unlock: " username
+read -p "  Input USERNAME to unlock: " username
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 # proses mengganti passwordnya
@@ -78,10 +80,10 @@ clear
   echo " "
   echo " "
   echo " "
-  echo "-------------------------------------------"
-  echo -e "Username ${blue}$username${NC} successfully ${green}UNLOCKED${NC}."
-  echo -e "Access for Username ${blue}$username${NC} has been restored"
-  echo "-------------------------------------------"
+  echo " ─────────────────────────────────────"
+  echo -e " Username ${blue}$username${NC} successfully ${green}UNLOCKED${NC}."
+  echo -e " Access for Username ${blue}$username${NC} has been restored"
+  echo " ─────────────────────────────────────"
 else
 echo " "
 echo -e "Username ${red}$username${NC} not found in your server."
