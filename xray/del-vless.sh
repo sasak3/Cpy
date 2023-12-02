@@ -12,9 +12,9 @@ clear
 
 NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-		echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\E[40;1;37m     ⇱ Delete Vless Account ⇲      \E[0m"
-        echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo -e "\033[0;36m     ⇱ Delete Vless Account ⇲      \E[0m"
+        echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 		echo ""
 		echo "You have no existing clients!"
 		echo ""
@@ -25,7 +25,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
 
 	clear
 	echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\E[40;1;37m     ⇱ Delete Vless Account ⇲      \E[0m"
+    echo -e "\033[0;36m     ⇱ Delete Vless Account ⇲      \E[0m"
     echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo "  User       Expired  " 
 	echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -42,7 +42,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
     systemctl restart xray > /dev/null 2>&1
     clear
     echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo " VLess Account Deleted Successfully"
+    echo "\033[0;36m  VLess Account Deleted Successfully"
     echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo " Client Name : $user"
     echo " Expired On  : $exp"
