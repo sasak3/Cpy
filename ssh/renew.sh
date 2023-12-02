@@ -35,6 +35,7 @@ echo -e " Days Added : $Days Days"
 echo -e " Expires on :  $Expiration_Display"
 echo -e ""
 echo -e "\e[33m ─────────────────────────────────────\033[0m"
+else
 clear
 echo -e ""
 echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
