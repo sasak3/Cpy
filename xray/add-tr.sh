@@ -70,13 +70,13 @@ TEXT="
 <code>➣Network  : WS or gRPC</code>
 <code>➣Path WS  : </code> <code>/trojan-ws</code>
 <code>➣Path GRPC: </code> <code>/trojan-grpc</code>
-<code>◇═══════════════════◇</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
 <code>➣ Link TLS  :</code> 
 <code>${trojan2}</code>
-<code>◇═══════════════════◇</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
 <code>➣ Link GRPC :</code> 
 <code>${trojan1}</code>
-<code>◇═══════════════════◇</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
 <code>📅Expired On : $exp</code>
 🌏@HRstores
 "
