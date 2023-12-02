@@ -158,7 +158,6 @@ echo -e " ws ssl   : 443" | tee -a /etc/log-create-user.log
 echo -e " SSL only : 447 , 777" | tee -a /etc/log-create-user.log
 echo -e " SlowDNS  : 53,5300,443" 
 echo -e " UDPGW    : 7200 = suport vc" | tee -a /etc/log-create-user.log
-echo -e " OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 echo -e " Payload Websocket ( port 80 )" | tee -a /etc/log-create-user.log
 echo -e "GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
