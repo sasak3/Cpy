@@ -170,7 +170,7 @@ echo -e "GET http://tsel.me/worryfree/ HTTP/1.1[crlf]Host:
 $domen[crlf][crlf]
 " | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
-echo -e " Expired On : $exp" | tee -a /etc/log-create-user.log
+echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p " 🌏 @HRstors"
