@@ -35,11 +35,14 @@ wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | a
 green_background="\033[42;37m"
 red_background="\033[41;37m"
 clear
-echo -e "     ${red_background}Create Account${NC}"
-echo -e "${hijau}"
-read -p "        Username : " Login
-read -p "        Password : " Pass
-read -p "        Expired  : " masaaktif
+echo -e ""
+echo -e "${kuning} ┌───────────────────────────────────┐${NC}"
+echo -e "${kuning} │${cyan}  .::::.  CREATE SSH OVPN  .::::.  ${NC}"
+echo -e "${kuning} └───────────────────────────────────┘${NC}"
+echo -e ""
+read -p "          Username : " Login
+read -p "          Password : " Pass
+read -p "          Expired  : " masaaktif
 IP=$(curl -sS ifconfig.me);
 ossl=`cat /root/log-install.txt | grep -w "OpenVPN" | cut -f2 -d: | awk '{print $6}'`
 opensh=`cat /root/log-install.txt | grep -w "OpenSSH" | cut -f2 -d: | awk '{print $1}'`
@@ -60,34 +63,32 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 clear
 TEXT="
-<code>◇═══════════════════◇</code>
-<code>  SSH Premium Account   </code>
-<code>◇═══════════════════◇</code>
-<code>Username        : </code> <code>$Login</code>
-<code>Password        : </code> <code>$Pass</code>
-<code>◇═══════════════════◇</code>
-<code>IP               : </code> <code>$IP</code>
-<code>HOST             : </code> <code>$domen</code>
-<code>Port OpenSSH    : </code> <code>22</code>
-<code>Port Dropbear    : </code> <code>109, 143</code>
-<code>Port SSH WS     : </code> <code>80, 8080</code>
-<code>Port SSH SSL WS : </code> <code>443</code>
-<code>Port SSL/TLS     : </code> <code>8443,8880</code>
-<code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
-<code>◇═══════════════════◇</code>
-<code>SSH UDP VIRAL :</code> <code>$domen:1-65535@$Login:$Pass</code>
-<code>◇═══════════════════◇</code>
-<code>HTTP COSTUM :</code> <code>$domen:80@$Login:$Pass</code>
-<code>Expired On   : $exp</code>
-<code>Host Slowdns    : </code> <code>$sldomain</code>
-<code>Port Slowdns     : </code> <code>80, 443, 53</code> 
-<code>Pub Key          : </code> <code> $slkey</code>
-<code>◇═══════════════════◇</code>
-<code>Payload WS/WSS   : </code>
-<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
-<code>◇═══════════════════◇</code>
-<code>Expired On   : $exp</code>
-📡@TazVPN
+<code>═══════════════════</code>
+<code> 🔰 SSH OVPN Account 🔰   </code>
+<code>═══════════════════</code>
+<code>Username     : </code> <code>$Login</code>
+<code>Password     : </code> <code>$Pass</code>
+<code>HOST         : </code> <code>$domen</code>
+<code>Host Slowdns : </code> <code>$sldomain</code>
+<code>═══════════════════</code>
+<code>IP           : </code> <code>$IP</code>
+<code>OpenSSH      : </code> <code>22</code>
+<code>Dropbear     : </code> <code>109, 143</code>
+<code>SSH WS       : </code> <code>80, 8080</code>
+<code>SSH SSL WS   : </code> <code>443</code>
+<code>SSL/TLS      : </code> <code>8443,8880</code>
+<code>SLOWDNS      : </code> <code>80, 443, 53</code> 
+<code>BadVPN UDP   : </code> <code>7100, 7300, 7300</code>
+<code>Pub Key      : </code> <code> $slkey</code>
+<code>═══════════════════</code>
+<code>🔰SSH UDP VIRAL🔰 :</code> <code>$domen:1-65535@$Login:$Pass</code>
+<code>🔰 HTTP COSTUM 🔰 :</code> <code>$domen:80@$Login:$Pass</code>
+<code>═══════════════════</code>
+<code>🔰 Payload WS  🔰 : </code>
+<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
+<code>═══════════════════</code>
+<code>📆Expired On : $exp</code>
+🌐 @HRstors
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
@@ -141,43 +142,38 @@ echo -e "━━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "enter back to menu  "
 else 
 
-echo -e "${cyan}___________________________________${NC}"
-echo -e "           ${red_background}ACCOUNT${NC}" | tee -a /etc/log-create-user.log
-echo -e "${cyan}___________________________________${NC}" | tee -a /etc/log-create-user.log
-echo -e "Username   : $Login" | tee -a /etc/log-create-user.log
-echo -e "Password   : $Pass" | tee -a /etc/log-create-user.log
-echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
-echo -e "${cyan}___________________________________${NC}" | tee -a /etc/log-create-user.log
-echo -e "           ${red_background}DETAIL${NC}" | tee -a /etc/log-create-user.log
-echo -e "${cyan}___________________________________${NC}" | tee -a /etc/log-create-user.log
-echo -e "Host     : $domen" | tee -a /etc/log-create-user.log
-echo -e "NS       : $sldomain" | tee -a /etc/log-create-user.log
-echo -e "PubKey   : $slkey" | tee -a /etc/log-create-user.log
-echo -e "Port ws  : 80" | tee -a /etc/log-create-user.log
-echo -e "ws ssl   : 443" | tee -a /etc/log-create-user.log
-echo -e "SSL only : 447 , 777" | tee -a /etc/log-create-user.log
-echo -e "SlowDNS  : 53,5300,443" 
-echo -e "UDPGW    : 7200 = suport vc" | tee -a /etc/log-create-user.log
-#echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
-echo -e "Payload Websocket ( port 80 )" | tee -a /etc/log-create-user.log
-echo -e "
-GET / HTTP/1.1[crlf]Host:
-$domen[crlf]Upgrade: ws[crlf][crlf]
-" | tee -a /etc/log-create-user.log
+echo -e "${cyan}    .::::.  SSH OVPN ACOUNT  .::::.  ${NC}" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " Username : $Login" | tee -a /etc/log-create-user.log
+echo -e " Password : $Pass" | tee -a /etc/log-create-user.log
+echo -e " Host     : $domen" | tee -a /etc/log-create-user.log
+echo -e " Host NS  : $sldomain" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " PubKey   : $slkey" | tee -a /etc/log-create-user.log
+echo -e " Port ws  : 80" | tee -a /etc/log-create-user.log
+echo -e " ws ssl   : 443" | tee -a /etc/log-create-user.log
+echo -e " SSL only : 447 , 777" | tee -a /etc/log-create-user.log
+echo -e " SlowDNS  : 53,5300,443" 
+echo -e " UDPGW    : 7200 = suport vc" | tee -a /etc/log-create-user.log
+echo -e " OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " Payload Websocket ( port 80 )" | tee -a /etc/log-create-user.log
+echo -e " 
+ GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 echo -e "payload ws ssl ( port 443 )"
-echo -e "
-GET-CFRAY wss://[host] HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: ws[crlf][crlf]
-" | tee -a /etc/log-create-user.log
+echo -e " 
+ GET-CFRAY wss://[host] HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: ws[crlf][crlf] " | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 echo -e "payload opok Telkomsel"
 echo -e "
-GET http://tsel.me/worryfree/ HTTP/1.1[crlf]Host: 
+ GET http://tsel.me/worryfree/ HTTP/1.1[crlf]Host: 
 $domen[crlf][crlf]
 " | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " Expired On : $exp" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Script By Setan-VPN"
+read -n 1 -s -r -p "Suport : @HRstors"
 menu
