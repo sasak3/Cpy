@@ -45,7 +45,6 @@ curl -F chat_id="$id_chat" -F document=@"$IP-$date.zip" -F caption="🔰 Save ba
 ➣Date   : $date
 ➣Time   : $time WIB
 ➣Link Backup : $link" https://api.telegram.org/bot$token/sendDocument &> /dev/null
-💠 Thank You For Using this Script
 
 echo -e "
 Detail Backup 
