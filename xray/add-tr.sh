@@ -84,7 +84,7 @@ TEXT="
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "\e[1;36m    .::::.  Xray/Vmess ACOUNT  .::::.  \033[0m" 
+echo -e "\e[1;36m     .::::.  TROJAN ACOUNT  .::::.  \033[0m" 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo -e "Remarks      : ${user}"
 echo -e "Host/IP      : ${domain}"
