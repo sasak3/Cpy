@@ -159,21 +159,18 @@ echo -e " UDPGW    : 7200 = suport vc" | tee -a /etc/log-create-user.log
 echo -e " OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 echo -e " Payload Websocket ( port 80 )" | tee -a /etc/log-create-user.log
-echo -e " 
- GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
+echo -e " GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 echo -e "payload ws ssl ( port 443 )"
-echo -e " 
- GET-CFRAY wss://[host] HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: ws[crlf][crlf] " | tee -a /etc/log-create-user.log
+echo -e " GET-CFRAY wss://[host] HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: ws[crlf][crlf] " | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 echo -e "payload opok Telkomsel"
-echo -e "
- GET http://tsel.me/worryfree/ HTTP/1.1[crlf]Host: 
+echo -e "GET http://tsel.me/worryfree/ HTTP/1.1[crlf]Host: 
 $domen[crlf][crlf]
 " | tee -a /etc/log-create-user.log
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 echo -e " Expired On : $exp" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Suport : @HRstors"
+read -n 1 -s -r -p " Suport : @HRstors"
 menu
