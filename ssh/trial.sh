@@ -47,33 +47,34 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 TEXT="
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>  SSH Premium Account   </code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Username        : </code> <code>$Login</code>
-<code>Password        : </code> <code>$Pass</code>
-<code>Expired          : </code> <code>$exp</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>IP               : </code> <code>$IP</code>
-<code>HOST            : </code> <code>$domen</code>
-<code>Port OpenSSH    : </code> <code>22</code>
-<code>Port Dropbear    : </code> <code>109, 143</code>
-<code>Port SSH WS     : </code> <code>80, 8080</code>
-<code>Port SSH SSL WS : </code> <code>443</code>
-<code>Port SSL/TLS     : </code> <code>8443,8880</code>
-<code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>SSH UDP VIRAL :</code> <code>$domen:1-65535@$Login:$Pass</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>HTTP COSTUM :</code> <code>$domen:80@$Login:$Pass</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Host Slowdns    : </code> <code>$sldomain</code>
-<code>Port Slowdns     : </code> <code>80, 443, 53</code> 
-<code>Pub Key          : </code> <code> $slkey</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Payload WS/WSS   : </code>
-<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>🔰 SSH OVPN Account 🔰   </code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Username   : </code> <code>$Login</code>
+<code>➣Password   : </code> <code>$Pass</code>
+<code>➣HOST       : </code> <code>$domen</code>
+<code>➣HST Slowdns: </code> <code>$sldomain</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣IP         : </code> <code>$IP</code>
+<code>➣OpenSSH    : </code> <code>22</code>
+<code>➣Dropbear   : </code> <code>109, 143</code>
+<code>➣SSH WS     : </code> <code>80, 8080</code>
+<code>➣SSH SSL WS : </code> <code>443</code>
+<code>➣SSL/TLS    : </code> <code>8443,8880</code>
+<code>➣SLOWDNS    : </code> <code>80, 443, 53</code> 
+<code>➣BadVPN UDP : </code> <code>7100, 7300, 7300</code>
+<code>➣Pub Key    : </code> <code> $slkey</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣SSH UDP VIRAL:</code> 
+<code>$domen:1-65535@$Login:$Pass</code>
+<code>➣HTTP COSTUM  :</code> 
+<code>$domen:80@$Login:$Pass</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Payload WS : </code>
+<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>📆Expired On : $exp</code>
+🌐 @HRstors
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
@@ -118,45 +119,37 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 
 else
 
-echo -e "\e[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37m        𝗔𝗖𝗖𝗢𝗨𝗡𝗧             \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Username    : $Login" | tee -a /etc/log-create-user.log
-echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
-echo -e "Expired On  : $exp" | tee -a /etc/log-create-user.log
-echo -e "\e[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37m         𝗦𝗘𝗥𝗩𝗘𝗥              \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "IP          : $IP" | tee -a /etc/log-create-user.log
-echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
-echo -e "Nameserver  : $sldomain" | tee -a /etc/log-create-user.log
-echo -e "PubKey      : $slkey" | tee -a /etc/log-create-user.log
-echo -e "OpenSSH     : 22" | tee -a /etc/log-create-user.log
-echo -e "SSH-WS      : 80" | tee -a /etc/log-create-user.log
-echo -e "SSH-SSL-WS  : 443" | tee -a /etc/log-create-user.log
-echo -e "SSL/TLS     : 447 , 777" | tee -a /etc/log-create-user.log
-echo -e "SlowDNS     : 53,5300,443" 
-echo -e "UDPGW       : 7100-7200 cocok vc & vcs" | tee -a /etc/log-create-user.log
-echo -e "SSH-80      : $domen:80@$Login:$Pass"
-echo -e "SSH-443     : $domen:443@$Login:$Pass"
-echo -e "SSH-UDP     : 1-65535" | tee -a /etc/log-create-user.log
-echo -e "SETING-UDP  : $domen:1-65535@$Login:$Pass"
-echo -e "\e[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
-echo -e "\e[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Payload WSS+SSL [husus port 443]" | tee -a /etc/log-create-user.log
-echo -e "
-GET-CFRAY wss://[host] [protocol]
-[crlf]Host: ${domen}
-[crlf]Upgrade: ws[crlf][crlf]
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e "${cyan}    .::::.  SSH OVPN ACOUNT  .::::.  ${NC}" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " Username : $Login" | tee -a /etc/log-create-user.log
+echo -e " Password : $Pass" | tee -a /etc/log-create-user.log
+echo -e " Host     : $domen" | tee -a /etc/log-create-user.log
+echo -e " Host NS  : $sldomain" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " PubKey   : $slkey" | tee -a /etc/log-create-user.log
+echo -e " Port ws  : 80" | tee -a /etc/log-create-user.log
+echo -e " ws ssl   : 443" | tee -a /etc/log-create-user.log
+echo -e " SSL only : 447 , 777" | tee -a /etc/log-create-user.log
+echo -e " SlowDNS  : 53,5300,443" 
+echo -e " UDPGW    : 7200 = suport vc" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " Payload Websocket ( port 80 )" | tee -a /etc/log-create-user.log
+echo -e "GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e "payload ws ssl ( port 443 )"
+echo -e "GET-CFRAY wss://[host] HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: ws[crlf][crlf] " | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e "payload opok Telkomsel"
+echo -e "GET http://tsel.me/worryfree/ HTTP/1.1[crlf]Host: 
+$domen[crlf][crlf]
 " | tee -a /etc/log-create-user.log
-echo -e "==============================="
-echo -e "Payload WS [husus port 80]" | tee -a /etc/log-create-user.log
-echo -e "
-GET / HTTP/1.1[crlf]Host: $domen
-[crlf]Upgrade: ws[crlf][crlf]
-" | tee -a /etc/log-create-user.log
-echo -e "\e[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
+echo -e " Expired On : $exp" | tee -a /etc/log-create-user.log
+echo -e "🌏 @HRstores" | tee -a /etc/log-create-user.log
+fi
+echo "" | tee -a /etc/log-create-user.log
+read -n 1 -s -r -p "Press enter to menu"
 fi
 echo ""
 read -n 1 -s -r -p "Press enter to menu"
