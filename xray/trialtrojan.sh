@@ -22,47 +22,48 @@ trojan1="$(echo $trojanlink1 | base64 -w 0)"
 trojan2="$(echo $trojanlink | base64 -w 0)"
 
 TEXT="
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>  Premium Trojan Account</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Remarks      : </code> <code>${user}</code>
-<code>Domain       : </code> <code>${domain}</code>
-<code>Port TLS     : </code> <code>443</code>
-<code>Port GRPC    : </code> <code>443</code>
-<code>User ID      : </code> <code>${uuid}</code>
-<code>AlterId      : 0</code>
-<code>Security     : auto</code>
-<code>Network      : WS or gRPC</code>
-<code>Path WS    : </code> <code>/trojan-ws</code>
-<code>Path GRPC  : </code> <code>/trojan-grpc</code>
-<code>Expired On : $exp</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Link TLS    :</code> 
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>🔰 TRIAL TROJAN 🔰   </code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Remarks  : </code> <code>${user}</code>
+<code>➣Domain   : </code> <code>${domain}</code>
+<code>➣Port TLS : </code> <code>443</code>
+<code>➣Port GRPC: </code> <code>443</code>
+<code>➣User ID  : </code> <code>${uuid}</code>
+<code>➣AlterId  : 0</code>
+<code>➣Security : auto</code>
+<code>➣Network  : WS or gRPC</code>
+<code>➣Path WS  : </code> <code>/trojan-ws</code>
+<code>➣Path GRPC: </code> <code>/trojan-grpc</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣ Link TLS  :</code> 
 <code>${trojan2}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Link GRPC    :</code> 
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣ Link GRPC :</code> 
 <code>${trojan1}</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>📅Expired On : $exp</code>
+🌏@HRstores
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m           Trial TROJAN           \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "\e[1;36m   .::::.  TRIAL TROJAN ACOUNT  .::::.  \033[0m" 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo -e "Remarks      : ${user}"
 echo -e "Host/IP      : ${domain}"
-echo -e "port         : ${tr}"
+echo -e "port         : 443/80"
 echo -e "Key          : ${uuid}"
 echo -e "Path         : /trojan-ws"
 echo -e "ServiceName  : trojan-grpc"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Link WS      : ${trojanlink}"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo -e "Link GRPC    : ${trojanlink1}"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Expired On   : $exp"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m@HRstores\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 
