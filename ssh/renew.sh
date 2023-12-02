@@ -6,10 +6,11 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m               RENEW  USER                \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
-echo
+echo -e ""
+echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
+echo -e "\e[33m │\e[1;36m .::::.  RENEW SSH OVPN  .::::.  \033[0m"
+echo -e "\e[33m └───────────────────────────────────┘\033[0m"
+echo 
 read -p "Username : " User
 egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
@@ -24,24 +25,25 @@ usermod -e  $Expiration $User
 egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m               RENEW  USER                \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
+echo -e ""
+echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
+echo -e "\e[33m │\e[1;36m .::::.  RENEW SSH OVPN  .::::.  \033[0m"
+echo -e "\e[33m └───────────────────────────────────┘\033[0m"
 echo -e ""
 echo -e " Username : $User"
 echo -e " Days Added : $Days Days"
 echo -e " Expires on :  $Expiration_Display"
 echo -e ""
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-else
+echo -e "\e[33m ─────────────────────────────────────\033[0m"
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m               RENEW  USER                \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
+echo -e ""
+echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
+echo -e "\e[33m │\e[1;36m .::::.  RENEW SSH OVPN  .::::.  \033[0m"
+echo -e "\e[33m └───────────────────────────────────┘\033[0m"
 echo -e ""
 echo -e "   Username Doesnt Exist      "
 echo -e ""
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m ─────────────────────────────────────\033[0m"
 fi
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
