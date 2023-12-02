@@ -39,13 +39,13 @@ url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 
-curl -F chat_id="$id_chat" -F document=@"$IP-$date.zip" -F caption="Thank You For Using this Script
-Domain : $domain
-IP VPS : $IP
-Date   : $date
-Time   : $time WIB
-Link Google : $link" https://api.telegram.org/bot$token/sendDocument &> /dev/null
-
+curl -F chat_id="$id_chat" -F document=@"$IP-$date.zip" -F caption="🔰 Save backup data 🔰
+➣Domain : $domain
+➣IP VPS : $IP
+➣Date   : $date
+➣Time   : $time WIB
+➣Link Backup : $link" https://api.telegram.org/bot$token/sendDocument &> /dev/null
+💠 Thank You For Using this Script
 
 echo -e "
 Detail Backup 
@@ -66,4 +66,4 @@ Link Backup   : $link
 Tanggal       : $date
 ==================================
 "
-echo "Silahkan disave link diatas"
+echo "Silahkan save link diatas"
