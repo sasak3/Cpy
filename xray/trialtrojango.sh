@@ -21,47 +21,48 @@ trojan1="$(echo $link1 | base64 -w 0)"
 trojan2="$(echo $link | base64 -w 0)"
 
 TEXT="
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>🔰 TRIAL TROJAN GO 🔰   </code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Remarks  : </code> <code>${user}</code>
+<code>➣Domain   : </code> <code>${domain}</code>
+<code>➣Port TLS : </code> <code>443</code>
+<code>➣Port GRPC: </code> <code>443</code>
+<code>➣User ID  : </code> <code>${uuid}</code>
+<code>➣AlterId  : 0</code>
+<code>➣Security : auto</code>
+<code>➣Network  : WS or gRPC</code>
+<code>➣Path     : </code> <code>/trojango</code>
 <code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>  Premium Trojan GO Account</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Remarks      : </code> <code>${user}</code>
-<code>Domain       : </code> <code>${domain}</code>
-<code>Port TLS     : </code> <code>443</code>
-<code>Port GRPC    : </code> <code>443</code>
-<code>User ID      : </code> <code>${uuid}</code>
-<code>AlterId      : 0</code>
-<code>Security     : auto</code>
-<code>Network      : WS or gRPC</code>
-<code>Path    : </code> <code>/trojango</code>
-<code>Expired On : $exp</code>
-<code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Link TRGO V2RAYNG    :</code> 
+<code>➣Link TRGO V2RAYNG :</code> 
 <code>${trojan2}</code>
 <code>◇━━━━━━━━━━━━━━━━━◇</code>
-<code>Link TRGO    :</code> 
+<code>➣Link TRGO :</code> 
 <code>${trojan1}</code>
 <code>◇━━━━━━━━━━━━━━━━━◇</code>
+<code>📅Expired On : $exp</code>
+🌏@HRstores
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m           Trial TROJAN GO          \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Remarks    : ${user}"
-echo -e "IP/Host    : ${MYIP}"
-echo -e "Address    : ${domain}"
-echo -e "Port       : ${trgo}"
-echo -e "Key        : ${uuid}"
-echo -e "Encryption : none"
-echo -e "Path       : /trojango"
-echo -e "Created    : $hariini"
-echo -e "Expired    : $exp"
-echo -e "========================="
-echo -e "Link TrGo  			: ${link}"
-echo -e "Link TrGo (v2rayNG)	: ${link1}"
-echo -e "========================="
-echo -e "Script multi trojan go"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "\e[1;36m     .::::.  TRIAL TROJAN GO  .::::.  \033[0m" 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "Remarks    : ${user}" | tee -a /etc/log-create-user.log
+echo -e "IP/Host    : ${MYIP}" | tee -a /etc/log-create-user.log
+echo -e "Address    : ${domain}" | tee -a /etc/log-create-user.log
+echo -e "Port       : ${trgo}" | tee -a /etc/log-create-user.log
+echo -e "Key        : ${uuid}" | tee -a /etc/log-create-user.log
+echo -e "Encryption : none" | tee -a /etc/log-create-user.log
+echo -e "Path       : /trojango" | tee -a /etc/log-create-user.log
+echo -e "Created    : $hariini" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "Link TrGo  	    : ${link}" | tee -a /etc/log-create-user.log
+echo -e "Link TrGo (v2rayNG): ${link1}" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "Expired    : $exp" | tee -a /etc/log-create-user.log
+echo -e "@HRstores"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 
