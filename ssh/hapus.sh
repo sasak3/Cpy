@@ -6,9 +6,12 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 
 clear
-echo -e "\e[1;37mDELETE USER\033[0m"
-echo -e ""  
-read -p              "Delete username >  " Pengguna
+echo -e ""
+echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
+echo -e "\e[33m │\e[1;36m .::::.  DELETE SSH OVPN  .::::.  \033[0m"
+echo -e "\e[33m └───────────────────────────────────┘\033[0m"
+echo -e ""
+read -p              " Delete username :  " Pengguna
 
 if getent passwd $Pengguna > /dev/null 2>&1; then
         userdel $Pengguna > /dev/null 2>&1
