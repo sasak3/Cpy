@@ -83,60 +83,60 @@ systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 
 TEXT="
-<code>◇═══════════════════◇</code>
-<code> 🔱 Trial Premium Vmess Account 🔱</code>
-<code>◇═══════════════════◇</code>
-<code>Remarks      : </code> <code>${user}</code>
-<code>Domain       : </code> <code>${domain}</code>
-<code>Port TLS     : </code> <code>443</code>
-<code>Port NTLS    : </code> <code>80, 8080</code>
-<code>Port GRPC    : </code> <code>443</code>
-<code>User ID      : </code> <code>${uuid}</code>
-<code>AlterId      : 0</code>
-<code>Security     : auto</code>
-<code>Network      : WS or gRPC</code>
-<code>Path         : </code> <code>/vmess</code>
-<code>ServiceName  : </code> <code>vmess-grpc</code>
-<code>◇═══════════════════◇</code>
-<code>Link TLS     :</code> 
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>🔰 Trial Vmess Account 🔰   </code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Remarks    : </code> <code>${user}</code>
+<code>➣Domain     : </code> <code>${domain}</code>
+<code>➣Port TLS   : </code> <code>443</code>
+<code>➣Port NTLS  : </code> <code>80, 8080</code>
+<code>➣Port GRPC  : </code> <code>443</code>
+<code>➣User ID    : </code> <code>${uuid}</code>
+<code>➣AlterId    : 0</code>
+<code>➣Security   : auto</code>
+<code>➣Network    : WS or gRPC</code>
+<code>➣Path       : </code> <code>/vmess</code>
+<code>➣ServiceName: </code> <code>vmess-grpc</code>
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Link TLS   :</code> 
 <code>${vmesslink1}</code>
-<code>◇═══════════════════◇</code>
-<code>Link NTLS    :</code> 
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Link NTLS  :</code> 
 <code>${vmesslink2}</code>
-<code>◇═══════════════════◇</code>
-<code>Link GRPC    :</code> 
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>➣Link GRPC  :</code> 
 <code>${vmesslink3}</code>
-<code>◇═══════════════════◇</code>
-<code>Expired On   : $exp</code>
-📡@TazVPN
+<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>📅Expired On : $exp</code>
+🌏 @HRstores
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\\E[40;1;37m        Trial Xray/Vmess Account        \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Remarks        : ${user}" | tee -a /etc/log-create-user.log
-echo -e "Domain         : ${domain}" | tee -a /etc/log-create-user.log
-echo -e "Port TLS       : 443" | tee -a /etc/log-create-user.log
-echo -e "Port none TLS  : 80" | tee -a /etc/log-create-user.log
-echo -e "Port  GRPC     : 443" | tee -a /etc/log-create-user.log
-echo -e "id             : ${uuid}" | tee -a /etc/log-create-user.log
-echo -e "alterId        : 0" | tee -a /etc/log-create-user.log
-echo -e "Security       : auto" | tee -a /etc/log-create-user.log
-echo -e "Network        : ws" | tee -a /etc/log-create-user.log
-echo -e "Path           : /vmess" | tee -a /etc/log-create-user.log
-echo -e "ServiceName    : vmess-grpc" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link TLS       : ${vmesslink1}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link none TLS  : ${vmesslink2}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link GRPC      : ${vmesslink3}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1;36m    .::::.  Trial vmess Account  .::::.  \033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Remarks      : ${user}" | tee -a /etc/log-create-user.log
+echo -e "Domain       : ${domain}" | tee -a /etc/log-create-user.log
+echo -e "Port TLS     : 443" | tee -a /etc/log-create-user.log
+echo -e "Port none TLS: 80" | tee -a /etc/log-create-user.log
+echo -e "Port  GRPC   : 443" | tee -a /etc/log-create-user.log
+echo -e "User id      : ${uuid}" | tee -a /etc/log-create-user.log
+echo -e "alterId      : 0" | tee -a /etc/log-create-user.log
+echo -e "Security     : auto" | tee -a /etc/log-create-user.log
+echo -e "Network      : ws" | tee -a /etc/log-create-user.log
+echo -e "Path         : /vmess" | tee -a /etc/log-create-user.log
+echo -e "ServiceName  : vmess-grpc" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link TLS     : ${vmesslink1}" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link none TLS: ${vmesslink2}" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link GRPC    : ${vmesslink3}" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Expired On   : $exp" | tee -a /etc/log-create-user.log
+echo -e "@HRstores" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 
