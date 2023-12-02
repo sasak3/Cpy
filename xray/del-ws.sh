@@ -26,9 +26,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 
 	clear
 	echo ""
-	echo " Select the existing client you want to remove"
+	echo "\033[0;36m Select the existing client you want to remove \033[0m"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	echo "     No  Expired   User"
 	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -46,13 +46,13 @@ rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
 clear
 echo ""
-echo "==============================="
-echo "  Xray/Vmess Account Deleted  "
-echo "==============================="
-echo "Username  : $user"
-echo "Expired   : $exp"
-echo "==============================="
-echo "Script By ARTA M"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo "\033[0;36m    Xray/Vmess Account Deleted  \033[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo " Username  : $user"
+echo " Expired   : $exp"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo "Script By HR-store"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 
