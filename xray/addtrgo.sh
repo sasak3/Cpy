@@ -96,8 +96,9 @@ echo -e "Encryption : none" | tee -a /etc/log-create-user.log
 echo -e "Path       : /trojango" | tee -a /etc/log-create-user.log
 echo -e "Created    : $hariini" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Link TrGo  	    : ${link}" | tee -a /etc/log-create-user.log
-echo -e "Link TrGo (v2rayNG): ${link1}" | tee -a /etc/log-create-user.log
+echo -e "Link Trojan Go : ${link}" | tee -a /etc/log-create-user.log
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "Link TrGo (v2rayNG) : ${link1}" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo -e "Expired    : $exp" | tee -a /etc/log-create-user.log
 echo -e "@HRstores"
