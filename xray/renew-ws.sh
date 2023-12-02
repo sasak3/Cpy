@@ -28,9 +28,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 
 	clear
 	echo ""
-	echo "Select the existing client you want to renew"
+	echo "\033[0;36m Select the existing client you want to renew \033[0m"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -54,13 +54,13 @@ systemctl restart xray.service
 service cron restart
 clear
 echo ""
-echo "==============================="
-echo "  Xray/Vmess Account Renewed  "
-echo "==============================="
-echo "Username  : $user"
-echo "Expired   : $exp4"
-echo "==============================="
-echo "Script By ARTA M"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;36m   Xray/Vmess Account Renewed  \033[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo " Username  : $user"
+echo " Expired   : $exp4"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo " Script By HR-store"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 
