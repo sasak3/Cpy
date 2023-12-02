@@ -6,11 +6,12 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m                 MEMBER SSH               \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"      
-echo "USERNAME          EXP DATE          STATUS"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e ""
+echo -e "\e[33m ┌────────────────────────────────────────────┐"
+echo -e "\e[33m │\e[1;36m  .::::.  MEMBER SSH OVPN  .::::.  "
+echo -e "\e[33m └────────────────────────────────────────────┘" 
+echo "  USERNAME          EXP DATE          STATUS"
+echo -e "\e[33m ────────────────────────────────────────────"
 while read expired
 do
 AKUN="$(echo $expired | cut -d: -f1)"
@@ -26,9 +27,9 @@ fi
 fi
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo "Account number: $JUMLAH user"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m ────────────────────────────────────────────\033[0m"
+echo "  Account number: $JUMLAH user"
+echo -e "\e[33m ────────────────────────────────────────────\033[0m"
 read -n 1 -s -r -p "Press any key to back on menu"
 
 menu
