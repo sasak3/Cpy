@@ -75,13 +75,13 @@ TEXT="
 <code>➣ServiceName: </code> <code>vless-grpc</code>
 <code>━━━━━━━━━━━━━━━━━━━</code>
 <code>➣Link TLS   :</code> 
-<code>${vlesslink1}</code>
+<code>${vless1}</code>
 <code>━━━━━━━━━━━━━━━━━━━</code>
 <code>➣Link NTLS  :</code> 
-<code>${vlesslink2}</code>
+<code>${vless2}</code>
 <code>━━━━━━━━━━━━━━━━━━━</code>
 <code>➣Link GRPC  :</code> 
-<code>${vlesslink3}</code>
+<code>${vless3}</code>
 <code>━━━━━━━━━━━━━━━━━━━</code>
 <code>📅Expired On : $exp</code>
 🌏 @HRstores
