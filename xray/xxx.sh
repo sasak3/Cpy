@@ -70,7 +70,7 @@ if [ "" = "$PKG_OK" ]; then
   sleep 1
   echo -e "[ ${green}NOTES${NC} ] After rebooting"
   echo -e "[ ${green}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${green}NOTES${NC} ] if you understand then tap enter now"
+  echo -e "[ ${green}NOTES${NC} ] if you understand then -y"
   read
 else
   echo -e "[ ${green}INFO${NC} ] Oke installed"
