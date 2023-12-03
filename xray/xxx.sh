@@ -120,7 +120,7 @@ mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/sasak3/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/xray/betool.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 yellow " Add Domain for ssh/vmess/vless/trojan dll"
@@ -151,11 +151,11 @@ read -rp "Choose Your Domain Installation : " dom
 
 if test $dom -eq 1; then
 clear
-wget -q -O /root/cf.sh "https://raw.githubusercontent.com/sasak3/v4/main/cf.sh"
+wget -q -O /root/cf.sh "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cf.sh"
 chmod +x /root/cf.sh
 ./cf.sh
 elif test $dom -eq 2; then
-wget -q -O /root/cf1.sh "https://raw.githubusercontent.com/sasak3/v4/main/cf1.sh"
+wget -q -O /root/cf1.sh "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cf1.sh"
 chmod +x /root/cf1.sh
 ./cf1.sh
 elif test $dom -eq 3; then
@@ -173,7 +173,7 @@ echo "$host" >> /root/domain
 #clear
 
 sleep 2
-wget https://raw.githubusercontent.com/vlukss/Premium/main/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
 rm -f /root/cfslow.sh
 
 #install ssh ovpn
@@ -208,7 +208,7 @@ echo -e "\e[33m │\e[1;36m      .::::.  INSTALL SLOWDNS  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
 clear
-wget -q -O slow.sh https://raw.githubusercontent.com/vlukss/Premium/main/slow.sh && chmod +x slow.sh && ./slow.sh
+wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 #Instal udp
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
@@ -255,9 +255,9 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo -e "\e[33m  ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "\e[33m  │\e[1;36m      .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
-echo -e "\e[33m  └─────────────────────────────────────────────────┘${NC}"
+echo -e "\e[33m ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "\e[33m │\e[1;36m     .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
+echo -e "\e[33m └─────────────────────────────────────────────────┘${NC}"
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH		: 22"  | tee -a log-install.txt
