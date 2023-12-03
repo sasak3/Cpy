@@ -33,7 +33,7 @@ read -p " Select From Options [ 1 - 14 ] : "  opt
 echo -e ""
 case $opt in
 1) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/heruahmad1/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
-2) clear ; wget https://raw.githubusercontent.com/heruahmad1/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
+2) clear ; wget https://raw.githubusercontent.com/sasak3/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
 3) clear ; bot ;;
 4) clear ; autobackup ;;
 5) clear ; backup ; exit ;;
