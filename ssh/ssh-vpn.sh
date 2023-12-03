@@ -276,7 +276,7 @@ wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/me
 wget -O menu-vmess "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-vmess.sh"
 wget https://raw.githubusercontent.com/sasak3/v4/main/menu-vless.sh && chmod +x menu-vless
 wget -O running "https://raw.githubusercontent.com/sasak3/v4/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/sasak3/V4/main/menu/clearcache.sh"
+wget -O clearcache "https://raw.githubusercontent.com/sasak3/v4/main/menu/clearcache.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-trojan.sh"
 
