@@ -11,13 +11,13 @@ rm -rf backup
 rm -rf restore
 # mendowload ulang
 
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/heruahmad1/v4/main/backup/menu-backup.sh" && chmod +x /usr/bin/menu-backup
-wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/heruahmad1/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
-wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/heruahmad1/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
+wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/menu-backup.sh" && chmod +x /usr/bin/menu-backup
+wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
+wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
 cd /usr/bin
-wget -O bot "https://raw.githubusercontent.com/heruahmad1/v4/main/bot.sh" chmod +x /usr/bin/bot
+wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/bot.sh" chmod +x /usr/bin/bot
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit
