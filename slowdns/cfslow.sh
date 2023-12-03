@@ -1,3 +1,9 @@
+#!/bin/bash
+# // String / Request Data
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+#MYIP=$(wget -qO- https://ipv4.icanhazip.com);
+#MYIP=$(wget -qO- https://ipv6.icanhazip.com);
 apt install jq curl -y
 DOMAIN=wakvluks.my.id
 DAOMIN=$(cat /etc/xray/domain)
