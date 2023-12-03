@@ -8,8 +8,8 @@ service sshd restart
 echo "Install Slowdns"
 rm -rf /etc/slowdns
 mkdir -m 777 /etc/slowdns
-wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/vlukss/Premium/main/server.key"
-wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/vlukss/Premium/main/server.pub"
+wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/server.key"
+wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/server.pub"
 wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/vlukss/Premium/main/sldns-server"
 wget -q -O /etc/slowdns/sldns-client "https://raw.githubusercontent.com/vlukss/Premium/main/sldns-client"
 cd
@@ -21,7 +21,7 @@ cd
 cd
 cat > /etc/systemd/system/client-sldns.service << END
 [Unit]
-Description=Client SlowDNS By HideSSH
+Description=Client SlowDNS By Hide-SSH
 Documentation=https://hidessh.com
 After=network.target nss-lookup.target
 [Service]
