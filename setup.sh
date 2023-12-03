@@ -3,7 +3,7 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
-REPO="https://raw.githubusercontent.com/heruahmad1/v4/main/"
+REPO="https://raw.githubusercontent.com/sasak3/v4/main/"
 clear
 red='\e[1;31m'
 green='\e[1;32m'
@@ -120,7 +120,7 @@ mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/heruahmad1/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 yellow " Add Domain for ssh/vmess/vless/trojan dll"
@@ -151,11 +151,11 @@ read -rp "Choose Your Domain Installation : " dom
 
 if test $dom -eq 1; then
 clear
-wget -q -O /root/cf.sh "https://raw.githubusercontent.com/heruahmad1/v4/main/cf.sh"
+wget -q -O /root/cf.sh "https://raw.githubusercontent.com/sasak3/v4/main/cf.sh"
 chmod +x /root/cf.sh
 ./cf.sh
 elif test $dom -eq 2; then
-wget -q -O /root/cf1.sh "https://raw.githubusercontent.com/heruahmad1/v4/main/cf1.sh"
+wget -q -O /root/cf1.sh "https://raw.githubusercontent.com/sasak3/v4/main/cf1.sh"
 chmod +x /root/cf1.sh
 ./cf1.sh
 elif test $dom -eq 3; then
@@ -182,15 +182,15 @@ echo -e "\e[33m │\e[1;36m     .::::.  INSTALL SSH OVPN  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 1
 clear
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
 echo -e "\e[33m │\e[1;36m      .::::.  INSTALL X-RAY  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 1
 clear
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/Sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/Sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 #pasang rc clone ssh ovpn 
 ### Pasang Rclone
@@ -199,7 +199,7 @@ echo -e "\e[33m │\e[1;36m    .::::.  INSTALL AUTO BACKUP  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
 clear   
 #Instal slowdns
 ### Pasang SlowDNS
@@ -216,7 +216,7 @@ echo -e "\e[33m │\e[1;36m         .::::.  INSTALL UDP  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
 clear
 
 cat> /root/.profile << END
