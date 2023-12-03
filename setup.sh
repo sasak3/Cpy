@@ -70,7 +70,7 @@ if [ "" = "$PKG_OK" ]; then
   sleep 1
   echo -e "[ ${green}NOTES${NC} ] After rebooting"
   echo -e "[ ${green}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${green}NOTES${NC} ] if you understand then -y"
+  echo -e "[ ${green}NOTES${NC} ] if you understand then tap enter"
   read
 else
   echo -e "[ ${green}INFO${NC} ] Oke installed"
@@ -256,9 +256,8 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
 echo -e "\e[33m ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m     .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
+echo -e "\e[33m │\e[1;36m        .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────────────┘${NC}"
-echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH		: 22"  | tee -a log-install.txt
 echo "   - SSH Websocket	: 80 [ON]" | tee -a log-install.txt
@@ -293,9 +292,7 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "    ------------------------------------------------------------"
 echo ""
-echo "      ===============-[ Script By HR-store ]-==============="
-echo -e ""
-echo ""
+echo "\e[33m      ===============-[ Script By HR-store ]-===============${NC}"
 echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
