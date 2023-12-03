@@ -24,7 +24,7 @@ checking_sc() {
     fi
 }
 checking_sc
-Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/sasak3/v4/main/bro | grep $ipsaya | awk '{print $2}')
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
@@ -40,7 +40,7 @@ let ssa=$ssx/2
 if [[ -e /usr/bin/bot ]]; then
 echo -ne
 else
-wget -O /usr/bin/bot https://raw.githubusercontent.com/heruahmad1/v4/main/bot.sh && chmod +x /usr/bin/bot
+wget -O /usr/bin/bot https://raw.githubusercontent.com/sasak3/v4/main/bot.sh && chmod +x /usr/bin/bot
 fi
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 # // Exporting Language to UTF-8
@@ -204,7 +204,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/artanodrop/permission/main/versions)
+export sem=$( curl -s https://raw.githubusercontent.com/sasak3/v4/main/bro)
 #export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
