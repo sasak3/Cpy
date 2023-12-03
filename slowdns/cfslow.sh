@@ -5,13 +5,13 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 #MYIP=$(wget -qO- https://ipv4.icanhazip.com);
 #MYIP=$(wget -qO- https://ipv6.icanhazip.com);
 apt install jq curl -y
-DOMAIN=wakvluks.my.id
+DOMAIN=hrvpn.my.id
 DAOMIN=$(cat /etc/xray/domain)
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.wakvluks.my.id
+SUB_DOMAIN=${sub}.hrvpn.my.id
 NS_DOMAIN=ns.${SUB_DOMAIN}
-CF_ID=prikitiuwkdm@gmail.com
-CF_KEY=349e06e87efbe8d689be5c2cdfb8fd32a8385
+CF_ID=ahmadkhairudin1996@gmail.com
+CF_KEY=ab4ab65e0df030c3bb23f6d8cee27f2773fd8
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS NS for ${SUB_DOMAIN}..."
