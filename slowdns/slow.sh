@@ -1,3 +1,9 @@
+#!/bin/bash
+# // String / Request Data
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+#MYIP=$(wget -qO- https://ipv4.icanhazip.com);
+#MYIP=$(wget -qO- https://ipv6.icanhazip.com);
 nsdomain=$(cat /etc/xray/nsdomain)
 cd
 echo "Port 2222" >> /etc/ssh/sshd_config
