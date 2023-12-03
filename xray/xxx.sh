@@ -120,7 +120,7 @@ mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/sasak3/v4/main/xray/betool.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 yellow " Add Domain for ssh/vmess/vless/trojan dll"
