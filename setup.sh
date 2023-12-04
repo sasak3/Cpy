@@ -123,7 +123,8 @@ echo ""
 wget -q https://raw.githubusercontent.com/sasak3/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-yellow " Add Domain for ssh/vmess/vless/trojan dll"
+echo -e""
+red " Add Domain for server"
 #echo " "
 #read -rp "Input ur domain : " -e pp
    # if [ -z $pp ]; then
@@ -173,78 +174,17 @@ echo "$host" >> /root/domain
 #clear
 
 sleep 2
-fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m▮"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
-}
-res1() {
 wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
 rm -f /root/cfslow.sh
-}
-netfilter-persistent
 clear
-fun_bar 'res1'
-
 #install ssh ovpn
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
 echo -e "\e[33m │\e[1;36m     .::::.  INSTALL SSH OVPN  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-sleep 2
+sleep 3
 clear
-fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m▮"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
-}
-res1() {
 wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
-}
-netfilter-persistent
 clear
-fun_bar 'res1'
 #Instal Xray
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
 echo -e "\e[33m │\e[1;36m      .::::.  INSTALL X-RAY  .::::.  \033[0m"
@@ -260,39 +200,7 @@ echo -e "\e[33m ┌────────────────────�
 echo -e "\e[33m │\e[1;36m    .::::.  INSTALL AUTO BACKUP  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
-clear
-fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m▮"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
-}
-res1() {
 wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
-}
-netfilter-persistent
-clear
-fun_bar 'res1'
 clear   
 #Instal slowdns
 ### Pasang SlowDNS
@@ -300,47 +208,14 @@ echo -e "\e[33m ┌────────────────────�
 echo -e "\e[33m │\e[1;36m      .::::.  INSTALL SLOWDNS  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
-clear
 wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 #Instal udp
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
 echo -e "\e[33m │\e[1;36m         .::::.  INSTALL UDP  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-sleep 2
 clear
-fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m▮"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
-}
-res1() {
 wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
-}
-netfilter-persistent
-clear
-fun_bar 'res1'
 clear
 
 cat> /root/.profile << END
