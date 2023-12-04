@@ -289,7 +289,7 @@ fun_bar() {
         done
         [[ -e $HOME/fim ]] && rm $HOME/fim && break
         echo -e "\033[0;33m]"
-        sleep 0,1s
+        sleep 1s
         tput cuu1
         tput dl1
         echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
@@ -354,10 +354,7 @@ wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/bot.sh"
 
 wget -O jam "https://raw.githubusercontent.com/sasak3/v4/main/jam.sh"
 wget -O up "https://raw.githubusercontent.com/sasak3/v4/main/up.sh"
-}
-netfilter-persistent
-clear
-fun_bar 'res1'
+
 chmod +x menu
 chmod +x menu-trial
 chmod +x menu-vmess
@@ -406,7 +403,10 @@ chmod +x backup
 chmod +x restore
 chmod +x jam
 cd
-
+}
+netfilter-persistent
+clear
+fun_bar 'res1'
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
