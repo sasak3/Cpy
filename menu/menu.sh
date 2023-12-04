@@ -4,7 +4,7 @@ data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date |
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
-data_ip="https://raw.githubusercontent.com/sasak3/v4/main/bro"
+data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
 checking_sc() {
     useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
     if [[ $date_list < $useexp ]]; then
@@ -24,7 +24,7 @@ checking_sc() {
     fi
 }
 checking_sc
-Name=$(curl -sS https://raw.githubusercontent.com/sasak3/v4/main/bro | grep $ipsaya | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
@@ -204,7 +204,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/sasak3/v4/main/bro)
+export sem=$( curl -s https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini)
 #export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
