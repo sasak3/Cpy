@@ -621,7 +621,7 @@ fun_bar() {
         done
         [[ -e $HOME/fim ]] && rm $HOME/fim && break
         echo -e "\033[0;33m]"
-        sleep 1s
+        sleep 0,1s
         tput cuu1
         tput dl1
         echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
