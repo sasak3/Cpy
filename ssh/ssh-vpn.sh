@@ -322,7 +322,7 @@ wget -O status "https://raw.githubusercontent.com/sasak3/v4/main/status.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/menu-backup.sh"
 wget -O backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh"
-wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/bot.sh"
+wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh"
 
 wget -O jam "https://raw.githubusercontent.com/sasak3/v4/main/jam.sh"
 wget -O up "https://raw.githubusercontent.com/sasak3/v4/main/up.sh"
