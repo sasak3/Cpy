@@ -270,34 +270,6 @@ netfilter-persistent save
 netfilter-persistent reload
 
 # download script
-#IFORMASI
-fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m▮"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
-}
-res1() {
 cd /usr/bin
 # menu
 wget -O menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh"
@@ -403,10 +375,6 @@ chmod +x backup
 chmod +x restore
 chmod +x jam
 cd
-}
-netfilter-persistent
-clear
-fun_bar 'res1'
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
@@ -458,7 +426,7 @@ echo -e "[ ${green}ok${NC} ] Restarting ssh "
 /etc/init.d/dropbear restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting dropbear "
-/etc/init.d/fail2ban restart >/dev/null 2>&1
+/etc/init.dfail2ban restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
 /etc/init.d/stunnel4 restart >/dev/null 2>&1
