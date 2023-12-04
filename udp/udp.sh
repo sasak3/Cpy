@@ -1,6 +1,6 @@
 #!/bin/bash
 #Script UdpCustom 2023
-#Script By MARDHEX
+#Script By Mardex
 
 cd
 rm -rf /root/udp
@@ -27,7 +27,7 @@ chmod 644 /root/udp/config.json
 if [ -z "$1" ]; then
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
-Description=UDP Custom by Andyyuda
+Description=UDP Custom by HR-vpn
 
 [Service]
 User=root
