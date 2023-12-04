@@ -292,7 +292,7 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "    ------------------------------------------------------------"
 echo ""
-echo "\e[33m      ===============-[ Script By HR-store ]-===============${NC}"
+echo -e "\e[33m    ===============-[ Script By HR-store ]-===============${NC}"
 echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
