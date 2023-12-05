@@ -54,7 +54,6 @@ rm -rf up
 # download script
 cd /usr/bin
 # menu
-wget -O up "https://raw.githubusercontent.com/sasak3/v4/main/up.sh"
 wget -O menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh"
 wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-vmess.sh"
@@ -93,10 +92,6 @@ wget -O bw "https://raw.githubusercontent.com/sasak3/v4/main/menu/bw.sh"
 wget -O port-ssl "https://raw.githubusercontent.com/sasak3/v4/main/port/port-ssl.sh"
 wget -O port-ovpn "https://raw.githubusercontent.com/sasak3/v4/main/port/port-ovpn.sh"
 
-
-wget -O xp "https://raw.githubusercontent.com/sasak3/v4/main/ssh/xp.sh"
-wget -O acs-set "https://raw.githubusercontent.com/sasak3/v4/main/acs-set.sh"
-
 wget -O sshws "https://raw.githubusercontent.com/sasak3/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/sasak3/v4/main/status.sh"
 wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
@@ -106,15 +101,40 @@ wget -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backu
 wget -O /usr/bin/up "https://raw.githubusercontent.com/sasak3/v4/main/up.sh" && chmod +x /usr/bin/up
 wget -O jam "https://raw.githubusercontent.com/sasak3/v4/main/jam.sh"
 wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
-#wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 ### Pasang SlowDNS
 
 wget https://raw.githubusercontent.com/sasak3/v4/main/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
 rm -f /root/cfslow.sh
-
-#install Bot panel
-wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/bot.sh" && chmod +x /usr/bin/bot
+wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh" && chmod +x /usr/bin/bot
 wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
+
+# vmess
+wget -O add-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-ws.sh" && chmod +x add-ws
+wget -O trialvmess "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialvmess.sh" && chmod +x trialvmess
+wget -O renew-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/renew-ws.sh" && chmod +x renew-ws
+wget -O del-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/del-ws.sh" && chmod +x del-ws
+wget -O cek-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/cek-ws.sh" && chmod +x cek-ws
+
+# vless
+wget -O add-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-vless.sh" && chmod +x add-vless
+wget -O trialvless "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialvless.sh" && chmod +x trialvless
+wget -O renew-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/renew-vless.sh" && chmod +x renew-vless
+wget -O del-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/del-vless.sh" && chmod +x del-vless
+wget -O cek-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/cek-vless.sh" && chmod +x cek-vless
+
+# trojan
+wget -O add-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-tr.sh" && chmod +x add-tr
+wget -O trialtrojan "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialtrojan.sh" && chmod +x trialtrojan
+wget -O del-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/del-tr.sh" && chmod +x del-tr
+wget -O renew-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/renew-tr.sh" && chmod +x renew-tr
+wget -O cek-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/cek-tr.sh" && chmod +x cek-tr
+
+# trojan go
+wget -O addtrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/addtrgo.sh" && chmod +x addtrgo
+wget -O trialtrojango "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialtrojango.sh" && chmod +x trialtrojango
+wget -O deltrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/deltrgo.sh" && chmod +x deltrgo
+wget -O renewtrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/renewtrgo.sh" && chmod +x renewtrgo
+wget -O cektrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/cektrgo.sh" && chmod +x cektrgo
 clear
 
 chmod +x menu
