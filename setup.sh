@@ -174,9 +174,6 @@ echo "$host" >> /root/domain
 #clear
 
 sleep 2
-wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
-rm -f /root/cfslow.sh
-clear
 #install ssh ovpn
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
 echo -e "\e[33m │\e[1;36m     .::::.  INSTALL SSH OVPN  .::::.  \033[0m"
@@ -209,13 +206,6 @@ echo -e "\e[33m │\e[1;36m      .::::.  INSTALL SLOWDNS  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 sleep 2
 wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
-clear
-#Instal udp
-echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m         .::::.  INSTALL UDP  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-clear
-wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
 clear
 #download extra menu
 wget https://raw.githubusercontent.com/sasak3/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
