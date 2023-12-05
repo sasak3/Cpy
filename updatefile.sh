@@ -25,7 +25,7 @@ fun_bar() {
         sleep 1s
         tput cuu1
         tput dl1
-        echo -ne "  \033[0;33mproses update menu \033[1;37m- \033[0;33m["
+        echo -ne "  \033[0;33mProses update \033[1;37m- \033[0;33m["
     done
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
