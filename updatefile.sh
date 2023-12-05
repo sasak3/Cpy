@@ -202,6 +202,4 @@ chmod +x jam
 fun_bar 'res1'
 echo " [INFO] Update Successfully"
 sleep 2
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
+exit
