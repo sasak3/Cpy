@@ -25,7 +25,7 @@ chmod 644 /root/udp/config.json
 if [ -z "$1" ]; then
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
-Description=UDP Custom by HR-vpn......... " | lolcat
+echo "UDP Custom by HR-vpn......... " | lolcat
 sleep 4
 
 [Service]
