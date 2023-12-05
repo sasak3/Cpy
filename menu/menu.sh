@@ -212,9 +212,9 @@ clear
 echo -e ""
 echo -e ""
 clear
-echo -e "$COLOR1  ┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓${NC}"
 echo -e "                .::::.  HR-VPN  .::::.          \E[0m" | lolcat
-echo -e "$COLOR1  └────────────────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓${NC}"
 echo -e "${BIYellow}  ┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "                      << INFORMASI VPS >>                    \E[0m" | lolcat                    
 echo -e "${BIYellow}  └────────────────────────────────────────────────────────────┘${NC}"
@@ -239,7 +239,7 @@ echo -e "${BIYellow}  ┌──────────────────�
 echo -e "${BICyan}   HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────────────┘${NC}"
 echo -e "                       Version script  3.0.1           \E[0m" | lolcat
-echo -e "${BOLD}${BIRed}                     ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${BIYellow}━━━${GREEN}━━━${NC}"
+echo -e "${BOLD}${BIRed}                     ▓▓▓${BIYellow}▓▓▓${GREEN}▓▓▓${BIRed}▓▓▓${BIYellow}▓▓▓${GREEN}▓▓▓${BIRed}▓▓▓${BIYellow}▓▓▓${GREEN}▓▓▓${NC}"
 echo -e ""
 read -p " Select From Options [ 1 - 6 ] : " opt
 echo -e ""
