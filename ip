@@ -280,6 +280,11 @@ wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod
 clear   
 #Instal slowdns
 wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+rm -f /root/cfslow.sh
+clear
+#udp
+wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
 clear
 #download extra menu
 wget https://raw.githubusercontent.com/sasak3/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
