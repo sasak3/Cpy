@@ -25,13 +25,13 @@ fun_bar() {
         sleep 1s
         tput cuu1
         tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+        echo -ne "  \033[0;33mproses update menu \033[1;37m- \033[0;33m["
     done
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
 }
 sleep 2
-res1() {
+
 # hapus menu
 rm -rf menu
 rm -rf menu-trial
@@ -78,7 +78,7 @@ rm -rf restore
 rm -rf jam
 rm -rf up
 #rm -rf bot
-
+res1() {
 # download script
 cd /usr/bin
 # vmess
