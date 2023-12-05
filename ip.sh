@@ -2,44 +2,11 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
-REPO1="https://raw.githubusercontent.com/sasak3/v4/main/"
-###
-    ipsaya=$(curl -sS ipinfo.io/ip)
-data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-date_list=$(date +"%Y-%m-%d" -d "$data_server")
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
-data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
-checking_sc() {
-    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
-    if [[ $date_list < $useexp ]]; then
-        echo -ne
-    else
-        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
-        echo -e "\033[1;36m \033[0m ${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •               \033[0m \033[1;36m $NC"
-        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
-        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
-        echo -e "            ${RED}PERMISSION DENIED !\033[0m"
-        echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
-        echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
-        echo -e "             \033[0;33mContact Your Admin \033[0m"
-        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/heruahmad"
-        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
-        exit
-    fi
-}
-checking_sc
-Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
-# =========================================
-    else
-    res="Permission Denied!"
-    fi
-   
-wget -O /etc/banner ${REPO1}config/banner >/dev/null 2>&1
-    chmod +x /etc/banner
+
+REPO="https://raw.githubusercontent.com/sasak3/v4/main/"
 clear
 red='\e[1;31m'
-green='\e[0;32m'
+green='\e[1;32m'
 yell='\e[1;33m'
 tyblue='\e[1;36m'
 NC='\e[0m'
@@ -65,7 +32,14 @@ dart=$(cat /etc/hosts | grep -w `hostname` | awk '{print $2}')
 if [[ "$hst" != "$dart" ]]; then
 echo "$localip $(hostname)" >> /etc/hosts
 fi
+
 mkdir -p /etc/xray
+mkdir -p /etc/v2ray
+touch /etc/xray/domain
+touch /etc/v2ray/domain
+touch /etc/xray/scdomain
+touch /etc/v2ray/scdomain
+
 
 echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
 sleep 1
@@ -89,21 +63,15 @@ if [ "" = "$PKG_OK" ]; then
   sleep 1
   echo ""
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 1. apt update -y"
+  echo -e "[ ${green}NOTES${NC} ] 1. apt update -y"  
+  echo -e "[ ${green}NOTES${NC} ] 2. apt upgrade -y"
+  echo -e "[ ${green}NOTES${NC} ] 3. apt dist-upgrade -y"
+  echo -e "[ ${green}NOTES${NC} ] 4. reboot"
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 2. apt upgrade -y"
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 3. apt dist-upgrade -y"
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 4. reboot"
-  sleep 1
-  echo ""
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] After rebooting"
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${yell}NOTES${NC} ] Notes, Script Mod By HR-vpn
-  "[ ${tyblue}NOTES${NC} ] if you understand then tap enter now.."
+  echo -e "[ ${green}NOTES${NC} ] After rebooting"
+  echo -e "[ ${green}NOTES${NC} ] Then run this script again"
+  echo -e "[ ${yell}NOTES${NC} ] Script Mod By HR-vpn"
+  echo -e "[ ${green}NOTES${NC} ] if you understand then tap enter"
   read
 else
   echo -e "[ ${green}INFO${NC} ] Oke installed"
@@ -144,48 +112,13 @@ chmod 644 /root/.profile
 
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Allright good ... installation file is ready"
+apt install python -y >/dev/null 2>&1
+echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
-PERMISSION
-if [ -f /home/needupdate ]; then
-red "Your script need to update first !"
-exit 0
-elif [ "$res" = "Permission Accepted..." ]; then
-green "Permission Accepted!"
-else
-red "Permission Denied!"
-rm setup.sh > /dev/null 2>&1
-sleep 10
-exit 0
-fi
-sleep 3
-
-mkdir -p /etc/ssnvpn
-mkdir -p /etc/ssnvpn/theme
-mkdir -p /var/lib/ssnvpn-pro >/dev/null 2>&1
-echo "IP=" >> /var/lib/ssnvpn-pro/ipvps.conf
-mkdir -p /etc/xray
-mkdir -p /etc/v2ray
-touch /etc/xray/domain
-touch /etc/v2ray/domain
-touch /etc/xray/scdomain
-touch /etc/v2ray/scdomain
-
-if [ -f "/etc/xray/domain" ]; then
-echo ""
-echo -e "[ ${green}INFO${NC} ] Script Already Installed"
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "y
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
-rm setup.sh
-sleep 10
-exit 0
-else
-clear
-fi
-fi
+mkdir -p /var/lib/SIJA >/dev/null 2>&1
+echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
     # > pasang gotop
     gotop_latest="$(curl -s https://api.github.com/repos/xxxserxxx/gotop/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
@@ -227,9 +160,9 @@ echo -e "            [Autoscrip premium]"
 echo -e " ════════════════════════════════════════" 
     echo -e "${red}      ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
     echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-    echo " 1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
-    echo " 2.Use Domain From script / Gunakan Domain Dari Script"
-    echo " 3. Choose Your Own Domain / Pilih Domain Sendiri"
+    echo "  1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
+    echo "  2. Use Domain From script / Gunakan Domain Dari Script"
+    echo "  3. Choose Your Own Domain / Pilih Domain Sendiri"
     echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
     read -rp "Choose Your Domain Installation : " dom 
 
