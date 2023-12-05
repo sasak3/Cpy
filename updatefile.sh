@@ -33,8 +33,6 @@ fun_bar() {
 sleep 2
 res1() {
 # hapus menu
-echo -e" [INFO] hapus menu
-
 rm -rf menu
 rm -rf menu-trial
 rm -rf menu-vmess
@@ -80,11 +78,8 @@ rm -rf restore
 rm -rf jam
 rm -rf up
 #rm -rf bot
-}
-netfilter-persistent
+
 # download script
-echo -e" [INFO] download menu xray'
-res2() {
 cd /usr/bin
 # vmess
 wget -O add-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-ws.sh" && chmod +x add-ws
@@ -113,11 +108,8 @@ wget -O trialtrojango "https://raw.githubusercontent.com/sasak3/v4/main/xray/tri
 wget -O deltrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/deltrgo.sh" && chmod +x deltrgo
 wget -O renewtrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/renewtrgo.sh" && chmod +x renewtrgo
 wget -O cektrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/cektrgo.sh" && chmod +x cektrgo
-}
-netfilter-persistent
+
 # menu
-echo -e" [INFO] download menu"
-res3() {
 wget -O menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh"
 wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-vmess.sh"
