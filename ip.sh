@@ -4,50 +4,37 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 REPO1="https://raw.githubusercontent.com/sasak3/v4/main/"
 ###
-BURIQ () {
-    curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini > /root/tmp
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
-    for user in "${data[@]}"
-    do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
+    ipsaya=$(curl -sS ipinfo.io/ip)
+data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+date_list=$(date +"%Y-%m-%d" -d "$data_server")
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
+checking_sc() {
+    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
+    if [[ $date_list < $useexp ]]; then
+        echo -ne
     else
-    rm -f  /etc/.$user.ini > /dev/null 2>&1
+        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
+        echo -e "\033[1;36m \033[0m ${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •               \033[0m \033[1;36m $NC"
+        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
+        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
+        echo -e "            ${RED}PERMISSION DENIED !\033[0m"
+        echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
+        echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
+        echo -e "             \033[0;33mContact Your Admin \033[0m"
+        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/heruahmad"
+        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
+        exit
     fi
-    done
-    rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini 
-MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $MYIP | awk '{print $2}')
-echo $Name > /usr/local/etc/.$Name.ini
-CekOne=$(cat /usr/local/etc/.$Name.ini)
-
-Bloman () {
-if [ -f "/etc/.$Name.ini" ]; then
-CekTwo=$(cat /etc/.$Name.ini)
-    if [ "$CekOne" = "$CekTwo" ]; then
-        res="Expired"
-    fi
-else
-res="Permission Accepted..."
-fi
-}
-
-PERMISSION () {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
+checking_sc
+Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
+# =========================================
     else
     res="Permission Denied!"
     fi
-    BURIQ
-}
+   
 wget -O /etc/banner ${REPO1}config/banner >/dev/null 2>&1
     chmod +x /etc/banner
 clear
@@ -175,6 +162,10 @@ exit 0
 fi
 sleep 3
 
+mkdir -p /etc/ssnvpn
+mkdir -p /etc/ssnvpn/theme
+mkdir -p /var/lib/ssnvpn-pro >/dev/null 2>&1
+echo "IP=" >> /var/lib/ssnvpn-pro/ipvps.conf
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 touch /etc/xray/domain
@@ -225,15 +216,15 @@ clear
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
 
-echo -e " ════════════════════════════════════════" | lolcat
-echo -e "      ╔╗╔╦═╗" | lolcat
-echo -e "      ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " | lolcat
-echo -e "      ║╔╗║╗╬══╩╗║╔╣╬║║║║ " | lolcat
-echo -e "      ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " | lolcat
-echo -e "      ────────────╚╝ " | lolcat
-echo -e " ════════════════════════════════════════" | lolcat
-echo -e "            [Autoscrip premium]" | lolcat
-echo -e " ════════════════════════════════════════" | lolcat
+echo -e " ════════════════════════════════════════" 
+echo -e "      ╔╗╔╦═╗" 
+echo -e "      ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " 
+echo -e "      ║╔╗║╗╬══╩╗║╔╣╬║║║║ " 
+echo -e "      ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " 
+echo -e "      ────────────╚╝ " 
+echo -e " ════════════════════════════════════════" 
+echo -e "            [Autoscrip premium]"
+echo -e " ════════════════════════════════════════" 
     echo -e "${red}      ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
     echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
     echo " 1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
@@ -264,7 +255,10 @@ echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
 #echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
 echo "$host" >> /root/domain
 #clear
-
+#dns
+wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+rm -f /root/cfslow.sh
+clear
 #install ssh ovpn
 echo -e "$green[INFO]$NC Install SSH"
 sleep 2
@@ -289,8 +283,6 @@ clear
 echo -e "$green[INFO]$NC Install SowDNS"
 sleep 2
 wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
-wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
-rm -f /root/cfslow.sh
 clear
 #udp
 echo -e "$green[INFO]$NC Install UDP"
@@ -339,7 +331,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "$red▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓$NC"
+echo "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
 echo ""
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
@@ -379,18 +371,12 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> WhatsApp : +6287864055410 (Text Only)"  | tee -a log-install.txt
 echo "   >>> Telegram : t.me/heruahmad"  | tee -a log-install.txt
-echo "$red▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓$NC"
+echo "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
 echo ""
-echo "$tyblue ====================-[ Script Mod By HR-vpn  ]-====================$NC"
+echo " ====================-[ Script Mod By HR-vpn  ]-===================="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
-rm /root/cf.sh >/dev/null 2>&1
-rm /root/setup.sh >/dev/null 2>&1
-rm /root/insshws.sh 
-rm /root/update.sh
-rm /root/nontls.sh
-rm /root/install-sldns.sh
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
