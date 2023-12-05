@@ -176,7 +176,7 @@ touch /etc/v2ray/scdomain
 if [ -f "/etc/xray/domain" ]; then
 echo ""
 echo -e "[ ${green}INFO${NC} ] Script Already Installed"
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "
+echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "y
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
 rm setup.sh
@@ -380,7 +380,7 @@ echo "" | tee -a log-install.txt
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
+echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "y
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
 exit 0
