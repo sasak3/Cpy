@@ -267,26 +267,41 @@ echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
 echo "$host" >> /root/domain
 #clear
 
-sleep 2
 #install ssh ovpn
+echo -e "$green[INFO]$NC Install SSH"
+sleep 2
 wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 #Instal Xray
+echo -e "$green[INFO]$NC Install Xray"
+sleep 2
 wget https://raw.githubusercontent.com/sasak3/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+clear
+#instal websocket
+echo -e "$green[INFO]$NC Install websocket"
+sleep 2
 wget https://raw.githubusercontent.com/sasak3/v4/main/Sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 #pasang rc clone ssh ovpn 
+echo -e "$green[INFO]$NC Install SET-BR"
+sleep 2
 wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
 clear   
 #Instal slowdns
+echo -e "$green[INFO]$NC Install SowDNS"
+sleep 2
 wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
 wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
 rm -f /root/cfslow.sh
 clear
 #udp
+echo -e "$green[INFO]$NC Install UDP"
+sleep 2
 wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
 clear
 #download extra menu
+echo -e "$green[INFO]$NC Download extra menu"
+sleep 2
 wget https://raw.githubusercontent.com/sasak3/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
 clear
 
@@ -326,44 +341,50 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo -e "\e[33m ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m        .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────────────┘${NC}"
+echo "$red▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓$NC"
+echo ""
+echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenSSH		: 22"  | tee -a log-install.txt
-echo "   - SSH Websocket	: 80 [ON]" | tee -a log-install.txt
-echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
-echo "   - Stunnel4		: 447, 777" | tee -a log-install.txt
-echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
-echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
-echo "   - Nginx		: 81" | tee -a log-install.txt
-echo "   - Vmess TLS		: 443" | tee -a log-install.txt
-echo "   - Vmess None TLS	: 80" | tee -a log-install.txt
-echo "   - Vless TLS		: 443" | tee -a log-install.txt
-echo "   - Vless None TLS	: 80" | tee -a log-install.txt
-echo "   - Trojan GRPC		: 443" | tee -a log-install.txt
-echo "   - Trojan WS		: 443" | tee -a log-install.txt
-echo "   - Trojan Go		: 443" | tee -a log-install.txt
-echo "   - slowdns              : 443,80,8080,53,5300" | tee -a log-install.txt
+echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
+echo "   - SSH Websocket           : 80" | tee -a log-install.txt
+echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
+echo "   - SSH NON-SSL Websocket   : 80, 8880" | tee -a log-install.txt
+echo "   - SLOWDNS                 : 5300 [OFF]" | tee -a log-install.txt
+echo "   - Stunnel4                : 447, 777" | tee -a log-install.txt
+echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
+echo "   - Badvpn                  : 7100-7900" | tee -a log-install.txt
+echo "   - Nginx                   : 81" | tee -a log-install.txt
+echo "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
+echo "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
+echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
+echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
+echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
+echo "   - Trojan WS               : 443" | tee -a log-install.txt
+echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
-echo "   - Dflate		: [ON]"  | tee -a log-install.txt
-echo "   - IPtables		: [ON]"  | tee -a log-install.txt
-echo "   - Auto-Reboot		: [ON]"  | tee -a log-install.txt
-echo "   - IPv6			: [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On	: $aureb:00 $gg GMT +7" | tee -a log-install.txt
+echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
+echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
+echo "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
+echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
+echo "   - Autoreboot On           : $aureb:00 $gg GMT +7" | tee -a log-install.txt
+echo "   - Autobackup Data" | tee -a log-install.txt
 echo "   - AutoKill Multi Login User" | tee -a log-install.txt
 echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Fully automatic script" | tee -a log-install.txt
 echo "   - VPS settings" | tee -a log-install.txt
 echo "   - Admin Control" | tee -a log-install.txt
-echo "   - Change port" | tee -a log-install.txt
+echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo "    ------------------------------------------------------------"
+echo ""  | tee -a log-install.txt
+echo "   >>> WhatsApp : +6287864055410 (Text Only)"  | tee -a log-install.txt
+echo "   >>> Telegram : t.me/heruahmad"  | tee -a log-install.txt
+echo "$red▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓$NC"
 echo ""
-echo -e "\e[33m    ===============-[ Script By HR-store ]-===============${NC}"
+echo "$tyblue ====================-[ Script Mod By HR-vpn  ]-====================$NC"
+echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 rm /root/cf.sh >/dev/null 2>&1
