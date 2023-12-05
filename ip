@@ -227,18 +227,33 @@ clear
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
 
-echo -e "════════════════════════════════════════" | lolcat
+echo -e " ════════════════════════════════════════" | lolcat
 echo -e "      ╔╗╔╦═╗" | lolcat
 echo -e "      ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " | lolcat
 echo -e "      ║╔╗║╗╬══╩╗║╔╣╬║║║║ " | lolcat
 echo -e "      ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " | lolcat
 echo -e "      ────────────╚╝ " | lolcat
-echo -e "════════════════════════════════════════" | lolcat
+echo -e " ════════════════════════════════════════" | lolcat
 echo -e "            [Autoscrip premium]" | lolcat
-echo -e "════════════════════════════════════════" | lolcat
-    echo -e "${red}    ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
-    echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-    echo "1. Use Domain From script / Gunakan Domain Dari Script"
-    echo "2. Choose Your Own Domain / Pilih Domain Sendiri"
+echo -e " ════════════════════════════════════════" | lolcat
+    echo -e "${red}      ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
+    echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+    echo " 1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
+    echo " 2.Use Domain From script / Gunakan Domain Dari Script"
+    echo " 3. Choose Your Own Domain / Pilih Domain Sendiri"
     echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
     read -rp "Choose Your Domain Installation : " dom 
+
+if test $dom -eq 1; then
+clear
+wget -q -O /root/cf.sh "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cf.sh"
+chmod +x /root/cf.sh
+./cf.sh
+elif test $dom -eq 2; then
+wget -q -O /root/cf1.sh "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cf1.sh"
+chmod +x /root/cf1.sh
+./cf1.sh
+elif test $dom -eq 3; then
+read -rp "Domain/Host: " -e host
+echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
+ "IP=$host" >> /etc/xray/domain
