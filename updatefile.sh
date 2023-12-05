@@ -128,13 +128,6 @@ wget -O /usr/bin/backup "https://raw.githubusercontent.com/sasak3/v4/main/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/up "https://raw.githubusercontent.com/sasak3/v4/main/up.sh" && chmod +x /usr/bin/up
 wget -O jam "https://raw.githubusercontent.com/sasak3/v4/main/jam.sh"
-wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
-
-### Pasang SlowDNS
-wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
-wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
-rm -f /root/cfslow.sh
-wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/bot221" && chmod +x /usr/bin/bot
 clear
 
 chmod +x menu
