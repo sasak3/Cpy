@@ -154,7 +154,7 @@ wget -O /usr/bin/backup "https://raw.githubusercontent.com/sasak3/v4/main/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
 }
 netfilter-persistent
-
+clear
 chmod +x menu
 chmod +x menu-trial
 chmod +x menu-vmess
@@ -200,6 +200,8 @@ chmod +x backup
 chmod +x restore
 chmod +x jam
 fun_bar 'res1'
-echo -e" [INFO] Update Successfully"
+echo " [INFO] Update Successfully"
 sleep 2
-exit
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
