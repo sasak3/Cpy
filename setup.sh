@@ -217,6 +217,9 @@ echo -e "\e[33m └────────────────────�
 clear
 wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
 clear
+#download extra menu
+wget https://raw.githubusercontent.com/sasak3/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
+clear
 
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
