@@ -50,6 +50,8 @@ rm -rf restore
 rm -rf jam
 rm -rf up
 #rm -rf bot
+clear
+clear
 #IFORMASI
 fun_bar() {
     CMD[0]="$1"
