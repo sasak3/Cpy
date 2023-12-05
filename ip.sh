@@ -311,6 +311,9 @@ echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
+rm /root/setup.sh >/dev/null 2>&1
+rm /root/ins-xray.sh >/dev/null 2>&1
+rm /root/insshws.sh >/dev/null 2>&1
 echo -e "
 "
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "y
