@@ -10,9 +10,8 @@ echo ""
 sleep 4
 echo " install UDP-CUSTOM........" | lolcat
 sleep 4
-clear
 echo "OTW BARENG HR STORE........" | lolcat
-clear
+sleep 4
 wget -q --show-progress --load-cookies /tmp/cookies.txt "https://gitlab.com/Exe302/Tunnel/-/raw/main/udp-custom-linux-amd64" -O /root/udp/udp-custom && rm -rf /tmp/cookies.txt
 chmod +x /root/udp/udp-custom
 clear
@@ -20,14 +19,14 @@ clear
 echo ""
 echo "Mempersiapkan progres udp......." | lolcat
 sleep 4
-clear
 wget -q --show-progress --load-cookies /tmp/cookies.txt "https://gitlab.com/Exe302/Tunnel/-/raw/main/config.json" -O /root/udp/config.json && rm -rf /tmp/cookies.txt
 chmod 644 /root/udp/config.json
 
 if [ -z "$1" ]; then
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
-Description=UDP Custom by HR-vpn
+Description=UDP Custom by HR-vpn......... " | lolcat
+sleep 4
 
 [Service]
 User=root
