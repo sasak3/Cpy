@@ -177,10 +177,12 @@ exit 0
 fi
 sleep 3
 
-mkdir -p /etc/ssnvpn
-mkdir -p /etc/ssnvpn/theme
-mkdir -p /var/lib/ssnvpn-pro >/dev/null 2>&1
-echo "IP=" >> /var/lib/ssnvpn-pro/ipvps.conf
+mkdir -p /etc/xray
+mkdir -p /etc/v2ray
+touch /etc/xray/domain
+touch /etc/v2ray/domain
+touch /etc/xray/scdomain
+touch /etc/v2ray/scdomain
 
 if [ -f "/etc/xray/domain" ]; then
 echo ""
@@ -207,18 +209,30 @@ fi
     chmod +x /tmp/bbr.sh && bash /tmp/bbr.sh
 
 echo ""
-wget -q https://raw.githubusercontent.com/myridwan/vvip/ipuk/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
-rm dependencies.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/dep.sh;chmod +x dep.sh;./dep.sh
+rm dep.sh
 clear
+#echo " "
+#read -rp "Input ur domain : " -e pp
+   # if [ -z $pp ]; then
+   #     echo -e "
+   #     Nothing input for domain!
+    #    Then a random domain will be created"
+   #else
+   #     echo "$pp" > /root/scdomain
+#	echo "$pp" > /etc/xray/scdomain
+#	echo "$pp" > /etc/xray/domain
+#	echo "$pp" > /etc/v2ray/domain
+#	echo $pp > /root/domain
+ #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
+  #  fi
 
 echo -e "════════════════════════════════════════" | lolcat
-echo -e ""
 echo -e "      ╔╗╔╦═╗" | lolcat
 echo -e "      ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " | lolcat
 echo -e "      ║╔╗║╗╬══╩╗║╔╣╬║║║║ " | lolcat
 echo -e "      ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " | lolcat
 echo -e "      ────────────╚╝ " | lolcat
-echo -e ""
 echo -e "════════════════════════════════════════" | lolcat
 echo -e "            [Autoscrip premium]" | lolcat
 echo -e "════════════════════════════════════════" | lolcat
