@@ -603,6 +603,8 @@ systemctl start trojan-go
 systemctl enable trojan-go
 systemctl restart trojan-go
 
+# download script
+cd /usr/bin
 # vmess
 wget -O add-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-ws.sh" && chmod +x add-ws
 wget -O trialvmess "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialvmess.sh" && chmod +x trialvmess
