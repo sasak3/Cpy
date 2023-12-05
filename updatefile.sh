@@ -31,9 +31,10 @@ fun_bar() {
     tput cnorm
 }
 sleep 2
+res1() {
 # hapus menu
 echo -e" [INFO] hapus menu
-res1() {
+
 rm -rf menu
 rm -rf menu-trial
 rm -rf menu-vmess
@@ -205,8 +206,7 @@ chmod +x menu-bckp
 chmod +x backup
 chmod +x restore
 chmod +x jam
-fun_bar 'res1'res2'
-fun_bar 'res3'
-echo -e " [INFO] Update Successfully"
+fun_bar 'res1'
+echo -e" [INFO] Update Successfully"
 sleep 2
 exit
