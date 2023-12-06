@@ -243,7 +243,7 @@ echo -e "${BIPurple}  ┌──────────────────�
 echo -e "${BIPurple}  │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIPurple}  └────────────────────────────────────────────────────┘${NC}"
 echo -e "                  Version script  3.0.1           \E[0m" | lolcat
-echo -e "${BOLD}${BIRed}              ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${UWhite}━━━${BICyan}━━━${BIPurple}━━━${UWhite}━━━${BIRed}━━━${NC}"
+echo -e "${BOLD}${BIRed}               ━━━${BIYellow}━━━${GREEN}━━━${BIRed}━━━${UWhite}━━━${BICyan}━━━${BIPurple}━━━${UWhite}━━━${BIRed}━━━${NC}"
 echo -e ""
 read -p " Select From Options [ 1 - 6 ] : " opt
 echo -e ""
