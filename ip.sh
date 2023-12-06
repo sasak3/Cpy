@@ -247,7 +247,9 @@ clear
 #udp
 echo -e "$green[INFO]$NC Install UDP"
 sleep 2
-wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
+wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
+clear
+wget https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh && chmod +x xroy.sh && ./xroy.sh
 clear
 #download extra menu
 echo -e "$green[INFO]$NC Download extra menu"
