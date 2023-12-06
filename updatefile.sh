@@ -123,7 +123,9 @@ wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
-clear
+# bot panell
+wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh" && chmod +x /usr/bin/bot
+
 clear
 chmod +x menu
 chmod +x menu-trial
@@ -153,22 +155,14 @@ chmod +x port-change
 chmod +x certv2ray
 chmod +x menu-webmin
 chmod +x speedtest
-chmod +x about
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
 
-chmod +x port-ssl
-chmod +x port-ovpn
-
-chmod +x xp
-chmod +x acs-set
 chmod +x sshws
 chmod +x status
-chmod +x menu-bckp
 chmod +x backup
 chmod +x restore
-chmod +x jam
 echo " [INFO] Update Successfully"
 sleep 2
 rm -rf updatefile.sh
