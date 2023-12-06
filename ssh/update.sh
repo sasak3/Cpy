@@ -120,7 +120,6 @@ wget -O auto-reboot "https://raw.githubusercontent.com/sasak3/v4/main/menu/auto-
 wget -O restarts "https://raw.githubusercontent.com/sasak3/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/sasak3/v4/main/menu/bw.sh"
 wget -O xp "https://raw.githubusercontent.com/sasak3/v4/main/ssh/xp.sh"
-wget -O acs-set "https://raw.githubusercontent.com/sasak3/v4/main/ssh/acs-set.sh"
 
 wget -O sshws "https://raw.githubusercontent.com/sasak3/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/sasak3/v4/main/status.sh"
@@ -159,7 +158,6 @@ chmod +x user-lock
 chmod +x user-unlock
 
 chmod +x xp
-chmod +x acs-set
 chmod +x menu-set
 chmod +x add-host
 chmod +x port-change
