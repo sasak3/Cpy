@@ -176,15 +176,15 @@ clear
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
 
-echo -e " ════════════════════════════════════════" | lolcat
-echo -e "          ╔╗╔╦═╗" | lolcat
-echo -e "          ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " | lolcat
-echo -e "          ║╔╗║╗╬══╩╗║╔╣╬║║║║ " | lolcat
-echo -e "          ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " | lolcat
-echo -e "          ────────────╚╝ " | lolcat
-echo -e " ════════════════════════════════════════" | lolcat
-echo -e "              [Autoscrip premium]" | lolcat
-echo -e " ════════════════════════════════════════" | lolcat
+echo -e " ════════════════════════════════════════" 
+echo -e "          ╔╗╔╦═╗" 
+echo -e "          ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " 
+echo -e "          ║╔╗║╗╬══╩╗║╔╣╬║║║║ " 
+echo -e "          ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " 
+echo -e "          ────────────╚╝ " 
+echo -e " ════════════════════════════════════════" 
+echo -e "              [Autoscrip premium]" 
+echo -e " ════════════════════════════════════════" 
     echo -e "${red}        ♦️ CUSTOM SETUP DOMAIN VPS     ${NC}"
     echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
     echo "  1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
@@ -248,8 +248,6 @@ clear
 echo -e "$green[INFO]$NC Install UDP"
 sleep 2
 wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp.sh
-clear
-wget https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh && chmod +x xroy.sh && ./xroy.sh
 clear
 #download extra menu
 echo -e "$green[INFO]$NC Download extra menu"
@@ -345,7 +343,7 @@ rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 echo -e "
 "
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "y
+echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
 exit 0
