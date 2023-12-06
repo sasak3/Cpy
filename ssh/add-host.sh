@@ -20,6 +20,6 @@ echo "IP=$host" > /var/lib/SIJA/ipvps.conf
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo "Dont forget to renew cert"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
+read -n 1 -s -r -p "tekan enter to renew cert"
+certv2ray
 fi
