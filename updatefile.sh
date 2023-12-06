@@ -106,8 +106,8 @@ wget -O delete "https://raw.githubusercontent.com/sasak3/v4/main/ssh/delete.sh"
 wget -O autokilll "https://raw.githubusercontent.com/sasak3/v4/main/ssh/autokilll.sh"
 wget -O ceklim "https://raw.githubusercontent.com/sasak3/v4/main/ssh/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/sasak3/v4/main/ssh/tendang.sh"
-wget -O user-lock "https://raw.githubusercontent.com/Andyyuda/v4/main/ssh/user-lock.sh"
-wget -O user-unlock "https://raw.githubusercontent.com/Andyyuda/v4/main/ssh/user-unlock.sh"
+wget -O user-lock "https://raw.githubusercontent.com/sasak3/v4/main/ssh/user-lock.sh"
+wget -O user-unlock "https://raw.githubusercontent.com/sasak3/v4/main/ssh/user-unlock.sh"
 
 # menu system
 wget -O menu-set "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-set.sh"
