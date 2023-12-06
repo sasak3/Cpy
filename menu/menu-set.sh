@@ -38,7 +38,7 @@ case $opt in
 4) clear ; autobackup ;;
 5) clear ; backup ; exit ;;
 6) clear ; restore ; exit ;;
-7) clear ; menu-domain ; exit ;;
+7) clear ; add-host ; exit ;;
 8) clear ; nano /etc/issue.net ; exit ;;  #ssh-vpn banner.conf
 9) clear ; restarts ; exit ;;
 10) clear ; bw ; exit ;;
