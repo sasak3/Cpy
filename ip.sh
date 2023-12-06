@@ -176,16 +176,16 @@ clear
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
 
-echo -e " ════════════════════════════════════════" 
-echo -e "      ╔╗╔╦═╗" 
-echo -e "      ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " 
-echo -e "      ║╔╗║╗╬══╩╗║╔╣╬║║║║ " 
-echo -e "      ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " 
-echo -e "      ────────────╚╝ " 
-echo -e " ════════════════════════════════════════" 
-echo -e "            [Autoscrip premium]"
-echo -e " ════════════════════════════════════════" 
-    echo -e "${red}      ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
+echo -e " ════════════════════════════════════════" | lolcat
+echo -e "          ╔╗╔╦═╗" | lolcat
+echo -e "          ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " | lolcat
+echo -e "          ║╔╗║╗╬══╩╗║╔╣╬║║║║ " | lolcat
+echo -e "          ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " | lolcat
+echo -e "          ────────────╚╝ " | lolcat
+echo -e " ════════════════════════════════════════" | lolcat
+echo -e "              [Autoscrip premium]" | lolcat
+echo -e " ════════════════════════════════════════" | lolcat
+    echo -e "${red}        ♦️ CUSTOM SETUP DOMAIN VPS     ${NC}"
     echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
     echo "  1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
     echo "  2. Use Domain From script / Gunakan Domain Dari Script"
@@ -247,7 +247,7 @@ clear
 #udp
 echo -e "$green[INFO]$NC Install UDP"
 sleep 2
-wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
+wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp.sh
 clear
 wget https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh && chmod +x xroy.sh && ./xroy.sh
 clear
