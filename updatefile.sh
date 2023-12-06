@@ -27,6 +27,8 @@ rm -rf autokill
 rm -rf ceklim
 rm -rf autokilll
 rm -rf tendang
+rm -rf user-lock
+rm -rf user-unlock
 rm -rf menu-set
 rm -rf menu-domain
 rm -rf add-host
