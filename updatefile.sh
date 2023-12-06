@@ -203,5 +203,4 @@ chmod +x jam
 fun_bar 'res1'
 echo " [INFO] Update Successfully"
 sleep 2
-rm -f updatefile.sh
 exit
