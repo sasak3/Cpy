@@ -32,7 +32,7 @@ echo -e ""
 read -p " Select From Options [ 1 - 14 ] : "  opt
 echo -e ""
 case $opt in
-1) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/sasak3/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
+1) clear ; rm -rf /root/update.sh && wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/update.sh && chmod +x update.sh && ./update.sh ;;
 2) clear ; wget https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh && chmod +x xroy.sh && ./xroy.sh ;;
 3) clear ; bot ;;
 4) clear ; autobackup ;;
