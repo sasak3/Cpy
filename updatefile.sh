@@ -52,35 +52,6 @@ rm -rf up
 #rm -rf bot
 clear
 
-#IFORMASI
-fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m▮"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mProses update \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
-}
-sleep 2
-res1() {
 # download script
 cd /usr/bin
 # vmess
@@ -153,8 +124,6 @@ wget -O /usr/bin/menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/men
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
 clear
-}
-netfilter-persistent
 clear
 chmod +x menu
 chmod +x menu-trial
@@ -200,7 +169,7 @@ chmod +x menu-bckp
 chmod +x backup
 chmod +x restore
 chmod +x jam
-fun_bar 'res1'
 echo " [INFO] Update Successfully"
 sleep 2
+rm -rf updatefile.sh
 exit
