@@ -6,6 +6,9 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 
 clear
+echo ""
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "               CHNGE DOMAIN
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 read -rp "Domain/Host: " -e host
@@ -18,8 +21,8 @@ menu
 else
 echo "IP=$host" > /var/lib/SIJA/ipvps.conf
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo "Dont forget to renew cert"
+echo " Domain di tambahkan"
 echo ""
-read -n 1 -s -r -p "tekan enter to renew cert"
+read -n 1 -s -r -p "Press enter to renew cert"
 certv2ray
 fi
