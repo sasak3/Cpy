@@ -3,6 +3,55 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e " [INFO] Downloading Update File"
+
+# hapus menu
+rm -rf menu
+rm -rf menu-trial
+rm -rf menu-vmess
+rm -rf menu-vlesss
+rm -rf running
+rm -rf clearcache
+rm -rf menu-trgo
+rm -rf menu-trojan
+rm -rf menu-sshh
+rm -rf menu-ssh
+rm -rf menu-sshh
+rm -rf usernew
+rm -rf trial
+rm -rf renew
+rm -rf hapus
+rm -rf cek
+rm -rf member
+rm -rf delete
+rm -rf autokill
+rm -rf ceklim
+rm -rf autokilll
+rm -rf tendang
+rm -rf menu-set
+rm -rf menu-domain
+rm -rf add-host
+rm -rf port-change
+rm -rf certv2ray
+rm -rf menu-webmin
+rm -rf speedtest
+rm -rf about
+rm -rf auto-reboot
+rm -rf restart
+rm -rf bw
+rm -rf port-ssl
+rm -rf port-ovpn
+rm -rf xp
+rm -rf acs-set
+rm -rf sshws
+rm -rf status
+rm -rf menu-backup
+rm -rf backup
+rm -rf restore
+rm -rf jam
+rm -rf up
+#rm -rf bot
+clear
+
 #IFORMASI
 fun_bar() {
     CMD[0]="$1"
@@ -103,6 +152,7 @@ wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
+clear
 }
 netfilter-persistent
 clear
