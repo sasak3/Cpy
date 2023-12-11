@@ -99,11 +99,11 @@ echo -e ""
 read -p "  Select From Options [1-5] : " opt
 echo -e ""
 case $opt in
-1) clear ; add-vless ; exit ;;
-2) clear ; trialvless ; exit ;;
-3) clear ; renew-vless ; exit ;;
-4) clear ; del-vless ; exit ;;
-5) clear ; cek-vless ; exit ;;
+1) clear ; addtrgo ; exit ;;
+2) clear ; trialtrojango ; exit ;;
+3) clear ; renewtrgo ; exit ;;
+4) clear ; deltrgo ; exit ;;
+5) clear ; cektrgo ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo "salah tekan" ; sleep 1 ; menu-trojan ;;
