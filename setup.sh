@@ -244,8 +244,8 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-wget -q https://raw.githubusercontent.com/botak8/v4/main/xray/f.sh;chmod +x f.sh;./f.sh
-rm f.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/ssh/update.sh;chmod +x update.sh;./update.sh
+rm update.sh
 }
 netfilter-persistent
 clear
