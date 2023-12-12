@@ -51,6 +51,7 @@ wget -O user-lock "https://raw.githubusercontent.com/sasak3/v4/main/ssh/user-loc
 wget -O user-unlock "https://raw.githubusercontent.com/sasak3/v4/main/ssh/user-unlock.sh"
 
 # menu system
+wget -0 update "https://raw.githubusercontent.com/sasak3/v4/main/ssh/update.sh"
 wget -O menu-set "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-set.sh"
 wget -O add-host "https://raw.githubusercontent.com/sasak3/v4/main/ssh/add-host.sh"
 wget -O port-change "https://raw.githubusercontent.com/sasak3/v4/main/port/port-change.sh"
@@ -72,9 +73,9 @@ wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh" && c
 
 clear
 chmod +x menu
+chmod +x update
 chmod +x menu-vless
 chmod +x menu-vmess
-#get https://raw.githubusercontent.com/sasak3/v4/main/menu-vless && chmod +x menu-vless
 chmod +x running
 chmod +x clearcache
 chmod +x menu-trgo
@@ -107,7 +108,6 @@ chmod +x sshws
 chmod +x status
 chmod +x backup
 chmod +x restore
-echo " [INFO] Update Successfully"
-sleep 2
+clear
 rm -rf updatefile.sh
 exit
