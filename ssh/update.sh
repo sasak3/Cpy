@@ -4,80 +4,22 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e " [INFO] Downloading Update File"
 
-# hapus menu
-rm -rf menu
-rm -rf menu-trial
-rm -rf menu-vmess
-rm -rf menu-vlesss
-rm -rf running
-rm -rf clearcache
-rm -rf menu-trgo
-rm -rf menu-trojan
-rm -rf menu-sshh
-rm -rf menu-ssh
-rm -rf menu-sshh
-rm -rf usernew
-rm -rf trial
-rm -rf renew
-rm -rf hapus
-rm -rf cek
-rm -rf member
-rm -rf delete
-rm -rf autokill
-rm -rf ceklim
-rm -rf autokilll
-rm -rf tendang
-rm -rf user-lock
-rm -rf user-unlock
-rm -rf menu-set
-rm -rf menu-domain
-rm -rf add-host
-rm -rf port-change
-rm -rf certv2ray
-rm -rf menu-webmin
-rm -rf speedtest
-rm -rf about
-rm -rf auto-reboot
-rm -rf restart
-rm -rf bw
-rm -rf port-ssl
-rm -rf port-ovpn
-rm -rf xp
-rm -rf acs-set
-rm -rf sshws
-rm -rf status
-rm -rf menu-backup
-rm -rf backup
-rm -rf restore
-rm -rf jam
-rm -rf up
-#rm -rf bot
-clear
+
 
 # download script
 cd /usr/bin
 # vmess
 wget -O add-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-ws.sh" && chmod +x add-ws
-wget -O trialvmess "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialvmess.sh" && chmod +x trialvmess
-wget -O renew-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/renew-ws.sh" && chmod +x renew-ws
-wget -O del-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/del-ws.sh" && chmod +x del-ws
-wget -O cek-ws "https://raw.githubusercontent.com/sasak3/v4/main/xray/cek-ws.sh" && chmod +x cek-ws
+
 
 # vless
 wget -O add-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-vless.sh" && chmod +x add-vless
-wget -O trialvless "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialvless.sh" && chmod +x trialvless
-wget -O renew-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/renew-vless.sh" && chmod +x renew-vless
-wget -O del-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/del-vless.sh" && chmod +x del-vless
-wget -O cek-vless "https://raw.githubusercontent.com/sasak3/v4/main/xray/cek-vless.sh" && chmod +x cek-vless
 
 # trojan
 wget -O add-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/add-tr.sh" && chmod +x add-tr
-wget -O trialtrojan "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialtrojan.sh" && chmod +x trialtrojan
-wget -O del-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/del-tr.sh" && chmod +x del-tr
-wget -O renew-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/renew-tr.sh" && chmod +x renew-tr
-wget -O cek-tr "https://raw.githubusercontent.com/sasak3/v4/main/xray/cek-tr.sh" && chmod +x cek-tr
 
 # trojan go
+wget -0 menu-vless "https://raw.githubusercontent.com/heruahmad1/backupvpshrvpn/main/menu3.sh
 wget -O addtrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/addtrgo.sh" && chmod +x addtrgo
 wget -O trialtrojango "https://raw.githubusercontent.com/sasak3/v4/main/xray/trialtrojango.sh" && chmod +x trialtrojango
 wget -O deltrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/deltrgo.sh" && chmod +x deltrgo
@@ -86,13 +28,12 @@ wget -O cektrgo "https://raw.githubusercontent.com/sasak3/v4/main/xray/cektrgo.s
 
 # menu
 wget -O menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-vmess.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/heruahmad1/backupvpshrvpn/main/menu2.sh"
 wget https://raw.githubusercontent.com/sasak3/v4/main/menu-vless && chmod +x menu-vless
 wget -O running "https://raw.githubusercontent.com/sasak3/v4/main/menu/running.sh"
 wget -O clearcache "https://raw.githubusercontent.com/sasak3/v4/main/menu/clearcache.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-trgo.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-trojan.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/heruahmad1/backupvpshrvpn/main/menu4.sh"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-sshh.sh"
@@ -123,19 +64,15 @@ wget -O xp "https://raw.githubusercontent.com/sasak3/v4/main/ssh/xp.sh"
 
 wget -O sshws "https://raw.githubusercontent.com/sasak3/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/sasak3/v4/main/status.sh"
-wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
-wget -O /usr/bin/menu "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
-wget -O /usr/bin/backup "https://raw.githubusercontent.com/sasak3/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
-wget -O /usr/bin/restore "https://raw.githubusercontent.com/sasak3/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
+wget https://raw.githubusercontent.com/botak8/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget -O /usr/bin/backup "https://raw.githubusercontent.com/botak8/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
+wget -O /usr/bin/restore "https://raw.githubusercontent.com/botak8/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
 wget -O bot "https://raw.githubusercontent.com/sasak3/v4/main/xray/xroy.sh" && chmod +x /usr/bin/bot
 
-#port
-wget -O port-ssl "https://raw.githubusercontent.com/sasak3/v4/main/port/port-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/sasak3/v4/main/port/port-ovpn.sh"
 
 clear
 chmod +x menu
-chmod +x menu-trial
+chmod +x menu-vless
 chmod +x menu-vmess
 #get https://raw.githubusercontent.com/sasak3/v4/main/menu-vless && chmod +x menu-vless
 chmod +x running
@@ -162,13 +99,10 @@ chmod +x menu-set
 chmod +x add-host
 chmod +x port-change
 chmod +x certv2ray
-chmod +x menu-webmin
 chmod +x speedtest
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
-chmod +x port-ssl
-chmod +x port-ovpn
 chmod +x sshws
 chmod +x status
 chmod +x backup
