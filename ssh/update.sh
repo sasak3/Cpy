@@ -51,7 +51,7 @@ wget -O user-lock "https://raw.githubusercontent.com/sasak3/v4/main/ssh/user-loc
 wget -O user-unlock "https://raw.githubusercontent.com/sasak3/v4/main/ssh/user-unlock.sh"
 
 # menu system
-wget -0 update "https://raw.githubusercontent.com/sasak3/v4/main/ssh/update.sh"
+wget -0 update "https://raw.githubusercontent.com/sasak3/v4/main/ssh/f.sh"
 wget -O menu-set "https://raw.githubusercontent.com/sasak3/v4/main/menu/menu-set.sh"
 wget -O add-host "https://raw.githubusercontent.com/sasak3/v4/main/ssh/add-host.sh"
 wget -O port-change "https://raw.githubusercontent.com/sasak3/v4/main/port/port-change.sh"
