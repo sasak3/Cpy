@@ -17,22 +17,20 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 tr="$(cat ~/log-install.txt | grep -w "Trojan WS " | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
+echo -e " $COLOR1┌─────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1│$NC   \e[33m     • ADD TROJAN ACOUNT •       ${NC}"
+echo -e " $COLOR1└─────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
-echo -e "\e[33m │\e[1;36m.::::.  ADD TROJAN ACOUNT  .::::.  \033[0m"
-echo -e "\e[33m └───────────────────────────────────┘\033[0m"
-echo -e ""
-		read -rp "User: " -e user
+		read -rp "  User: " -e user
 		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
-		echo -e ""
-                echo -e "\e[33m ┌───────────────────────────────────┐\033[0m"
-                echo -e "\e[33m │\e[1;36m.::::.  ADD TROJAN ACOUNT  .::::.  \033[0m"
-                echo -e "\e[33m └───────────────────────────────────┘\033[0m"
+echo -e " $COLOR1┌─────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1│$NC   \e[33m     • ADD TROJAN ACOUNT •       ${NC}"
+echo -e " $COLOR1└─────────────────────────────────────────┘${NC}"
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "  A client with the specified name was already created, please choose another name."
 			echo ""
 			echo -e "\e[33m─────────────────────────────────────\033[0m"
 			read -n 1 -s -r -p "Press any key to back on menu"
@@ -57,12 +55,12 @@ trojan1="$(echo $trojanlink1 | base64 -w 0)"
 trojan2="$(echo $trojanlink | base64 -w 0)"
 
 TEXT="
-<code>━━━━━━━━━━━━━━━━━━━</code>
-<code>🔰 TROJAN Account 🔰   </code>
-<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>════════════════════════════════════</code>
+<code>           🔰 XRAY TROJAN 🔰              </code>
+<code>════════════════════════════════════</code>
 <code>➣Remarks  : </code> <code>${user}</code>
 <code>➣Domain   : </code> <code>${domain}</code>
-<code>➣Port TLS : </code> <code>443</code>
+<code>➣Port TLS : </code> <code>${tr}</code>
 <code>➣Port GRPC: </code> <code>443</code>
 <code>➣User ID  : </code> <code>${uuid}</code>
 <code>➣AlterId  : 0</code>
@@ -70,36 +68,40 @@ TEXT="
 <code>➣Network  : WS or gRPC</code>
 <code>➣Path WS  : </code> <code>/trojan-ws</code>
 <code>➣Path GRPC: </code> <code>/trojan-grpc</code>
-<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>════════════════════════════════════</code>
 <code>➣ Link TLS  :</code> 
-<code>${trojan2}</code>
-<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>${trojanlink}</code>
+<code>════════════════════════════════════</code>
 <code>➣ Link GRPC :</code> 
-<code>${trojan1}</code>
-<code>━━━━━━━━━━━━━━━━━━━</code>
+<code>${trojanlink1}</code>
+<code>════════════════════════════════════</code>
 <code>📅Expired On : $exp</code>
 🌏@HRstores
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "\e[1;36m     .::::.  TROJAN ACOUNT  .::::.  \033[0m" 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Remarks      : ${user}"
-echo -e "Host/IP      : ${domain}"
-echo -e "port         : 443/80"
-echo -e "Key          : ${uuid}"
-echo -e "Path         : /trojan-ws"
-echo -e "ServiceName  : trojan-grpc"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Link WS      : ${trojanlink}"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Link GRPC    : ${trojanlink1}"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Expired On   : $exp"
-echo -e "\e[33m@HRstores\033[0m"
-echo ""
+clear
+echo -e "\e[33m════════════════════════════════${NC}"
+echo -e "\e[37m       🔰 XRAY TROJAN 🔰     ${NC}"
+echo -e "\e[33m════════════════════════════════${NC}"
+echo -e "Remarks     : ${user}" 
+echo -e "Expired On  : $exp" 
+echo -e "Host/IP     : ${domain}" 
+echo -e "Port        : ${tr}" 
+echo -e "Key         : ${uuid}" 
+echo -e "Path        : /trojan-ws"
+echo -e "Path WSS    : wss://yourbug/trojan-ws" 
+echo -e "ServiceName : trojan-grpc" 
+echo -e "\e[33m════════════════════════════════${NC}"
+echo -e "Link WS : "
+echo -e "${trojanlink}" 
+echo -e "\e[33m════════════════════════════════${NC}"
+echo -e "Link GRPC : "
+echo -e "${trojanlink1}"
+echo -e "\e[33m════════════════════════════════${NC}"
+echo -e "\e[37m Premium VPN Auto Script Service${NC}" 
+echo "" 
 read -n 1 -s -r -p "Press any key to back on menu"
 
 menu
